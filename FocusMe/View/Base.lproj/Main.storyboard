@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BNQ-9v-cHc">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Light</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="7Ye-G0-KmO">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" title="MainVC" id="BNQ-9v-cHc" customClass="MainVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BfA-fJ-OBX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0d0-Y5-WxT" userLabel="NavBar">
+                                <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG8-nZ-7a5" userLabel="Right button">
+                                        <rect key="frame" x="352" y="9.3333333333333321" width="42" height="42"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="help_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="oEa-2r-aFb" kind="presentation" id="6Eo-EQ-OAB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="IG8-nZ-7a5" firstAttribute="centerY" secondItem="0d0-Y5-WxT" secondAttribute="centerY" id="5bO-Nv-GZV"/>
+                                    <constraint firstAttribute="height" constant="60" id="cA4-rA-VUp"/>
+                                    <constraint firstAttribute="trailing" secondItem="IG8-nZ-7a5" secondAttribute="trailing" constant="20" id="gbf-TR-K0r"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPE-ds-tRh">
+                                <rect key="frame" x="20" y="110" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="hGh-ox-fMN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1W-cT-ev2">
+                                <rect key="frame" x="0.0" y="255" width="414" height="356"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ResultCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultCell" rowHeight="40" id="cb3-eF-KsV" customClass="MainVCResultCell" customModule="FocusMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cb3-eF-KsV" id="HZX-kS-8Q4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H66-mB-qKs">
+                                                    <rect key="frame" x="20" y="3" width="374" height="34"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Zef-Ee-b6i"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-lu-V6v">
+                                                    <rect key="frame" x="35" y="8.6666666666666661" width="145.66666666666666" height="23.333333333333336"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdV-fq-8bH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45.666666666666664" height="23.333333333333332"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="gn4-1q-UWS"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2Q-pd-NCt">
+                                                            <rect key="frame" x="53.666666666666671" y="0.0" width="5.6666666666666643" height="23.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kx-uQ-Oax">
+                                                            <rect key="frame" x="67.333333333333343" y="0.0" width="78.333333333333343" height="23.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="H66-mB-qKs" firstAttribute="leading" secondItem="HZX-kS-8Q4" secondAttribute="leading" constant="20" id="Nvi-jq-D9a"/>
+                                                <constraint firstItem="Zmu-lu-V6v" firstAttribute="leading" secondItem="HZX-kS-8Q4" secondAttribute="leading" constant="35" id="QZo-EW-BQB"/>
+                                                <constraint firstItem="H66-mB-qKs" firstAttribute="centerY" secondItem="HZX-kS-8Q4" secondAttribute="centerY" id="iGl-jt-hfR"/>
+                                                <constraint firstItem="Zmu-lu-V6v" firstAttribute="centerY" secondItem="HZX-kS-8Q4" secondAttribute="centerY" id="sKt-oq-HOK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="movingView" destination="H66-mB-qKs" id="DcC-i9-GnI"/>
+                                            <outlet property="percentageLabel" destination="vdV-fq-8bH" id="g6L-Am-2Fo"/>
+                                            <outlet property="trainingNumberLabel" destination="3kx-uQ-Oax" id="aTj-Vg-a0T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BNQ-9v-cHc" id="wsE-t4-6Om"/>
+                                    <outlet property="delegate" destination="BNQ-9v-cHc" id="jAp-z3-1Kl"/>
+                                </connections>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-mN-bcF">
+                                <rect key="frame" x="20" y="631" width="374" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saH-Ok-BYP" customClass="RectangleActionButton" customModule="FocusMe" customModuleProvider="target">
+                                        <rect key="frame" x="62" y="0.0" width="250" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="CBW-4E-QMc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="mtt-hH-r2q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <state key="normal" title="Start session">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startSession:" destination="BNQ-9v-cHc" eventType="touchUpInside" id="F8r-hq-BqT"/>
+                                            <segue destination="gsS-Gf-fdc" kind="presentation" identifier="MainToCount" id="VoF-yw-Zh0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CPE-ds-tRh" firstAttribute="leading" secondItem="F4P-ky-MFR" secondAttribute="leading" constant="20" id="1Fs-Rr-zZK"/>
+                            <constraint firstItem="F4P-ky-MFR" firstAttribute="bottom" secondItem="uk5-mN-bcF" secondAttribute="bottom" constant="50" id="1gN-ul-cfH"/>
+                            <constraint firstItem="0d0-Y5-WxT" firstAttribute="top" secondItem="F4P-ky-MFR" secondAttribute="top" id="9uq-zV-2Hl"/>
+                            <constraint firstItem="c1W-cT-ev2" firstAttribute="top" secondItem="0d0-Y5-WxT" secondAttribute="bottom" constant="175" id="Inp-u3-gMH"/>
+                            <constraint firstItem="0d0-Y5-WxT" firstAttribute="trailing" secondItem="F4P-ky-MFR" secondAttribute="trailing" id="JEd-Nh-SOh"/>
+                            <constraint firstItem="CPE-ds-tRh" firstAttribute="top" secondItem="0d0-Y5-WxT" secondAttribute="bottom" constant="30" id="JFY-KU-rZV"/>
+                            <constraint firstItem="F4P-ky-MFR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CPE-ds-tRh" secondAttribute="trailing" constant="25" id="cqL-WT-69u"/>
+                            <constraint firstItem="c1W-cT-ev2" firstAttribute="leading" secondItem="F4P-ky-MFR" secondAttribute="leading" id="cvn-6C-5hI"/>
+                            <constraint firstItem="uk5-mN-bcF" firstAttribute="leading" secondItem="F4P-ky-MFR" secondAttribute="leading" constant="20" id="dEC-K8-2Yo"/>
+                            <constraint firstItem="F4P-ky-MFR" firstAttribute="trailing" secondItem="uk5-mN-bcF" secondAttribute="trailing" constant="20" id="gf9-Rr-YJL"/>
+                            <constraint firstItem="0d0-Y5-WxT" firstAttribute="leading" secondItem="F4P-ky-MFR" secondAttribute="leading" id="hVM-kM-0BB"/>
+                            <constraint firstItem="c1W-cT-ev2" firstAttribute="trailing" secondItem="F4P-ky-MFR" secondAttribute="trailing" id="sik-dh-aXM"/>
+                            <constraint firstItem="uk5-mN-bcF" firstAttribute="top" secondItem="c1W-cT-ev2" secondAttribute="bottom" constant="20" id="wrQ-mq-A92"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F4P-ky-MFR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Zx-h0-QXB">
+                        <barButtonItem key="rightBarButtonItem" image="help_white" id="dJr-mI-3Ja">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonAction" destination="saH-Ok-BYP" id="xBh-p1-bW4"/>
+                        <outlet property="headerLabel" destination="CPE-ds-tRh" id="Re5-rE-EUO"/>
+                        <outlet property="tableView" destination="c1W-cT-ev2" id="r5V-9w-Fvr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="up2-pP-2sz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="889"/>
+        </scene>
+        <!--InstructionsVC-->
+        <scene sceneID="ADi-hp-WBy">
+            <objects>
+                <viewController id="oEa-2r-aFb" customClass="InstructionsVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kzg-LG-Amd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How it works." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Zu-3w-RWk">
+                                <rect key="frame" x="30" y="70" width="234" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="0.27450980392156865" green="0.93333333333333335" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-Gs-EMg" customClass="RectangleActionButton" customModule="FocusMe" customModuleProvider="target">
+                                <rect key="frame" x="82" y="631" width="250" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="7jL-ew-oWY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="tA7-Wi-sJf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.27450980390000002" green="0.93333333330000001" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PcA-1A-skJ" kind="unwind" unwindAction="unwindToMainWithSegue:" id="Kkv-SU-bD4"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="focus me is designed to increase your ability to hone your focus in a world where everything is trying to distract you." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO1-7R-8ib">
+                                <rect key="frame" x="30" y="144" width="354" height="125.33333333333331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QO1-7R-8ib" firstAttribute="top" secondItem="7Zu-3w-RWk" secondAttribute="bottom" constant="30" id="HGH-lp-0by"/>
+                            <constraint firstItem="db8-Az-fUM" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7Zu-3w-RWk" secondAttribute="trailing" constant="150" id="IHa-YP-CAt"/>
+                            <constraint firstItem="7Zu-3w-RWk" firstAttribute="leading" secondItem="db8-Az-fUM" secondAttribute="leading" constant="30" id="NZs-Ab-vif"/>
+                            <constraint firstItem="gfv-Gs-EMg" firstAttribute="centerX" secondItem="Kzg-LG-Amd" secondAttribute="centerX" id="YNw-Am-4RY"/>
+                            <constraint firstItem="db8-Az-fUM" firstAttribute="trailing" secondItem="QO1-7R-8ib" secondAttribute="trailing" constant="30" id="YcE-wi-Mmc"/>
+                            <constraint firstItem="gfv-Gs-EMg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QO1-7R-8ib" secondAttribute="bottom" constant="10" id="cig-72-GEF"/>
+                            <constraint firstItem="db8-Az-fUM" firstAttribute="bottom" secondItem="gfv-Gs-EMg" secondAttribute="bottom" constant="50" id="fOO-0r-xPf"/>
+                            <constraint firstItem="QO1-7R-8ib" firstAttribute="leading" secondItem="db8-Az-fUM" secondAttribute="leading" constant="30" id="hKx-4v-MBP"/>
+                            <constraint firstItem="7Zu-3w-RWk" firstAttribute="top" secondItem="db8-Az-fUM" secondAttribute="top" constant="50" id="hhS-ze-AmT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="db8-Az-fUM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c0e-3c-TVM">
+                        <barButtonItem key="rightBarButtonItem" image="x_grey" id="xdy-3D-gtu">
+                            <color key="tintColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dimissView:" destination="oEa-2r-aFb" id="sdT-rF-VdB"/>
+                                <segue destination="PcA-1A-skJ" kind="unwind" unwindAction="unwindToMainNavControllerWithSegue:" id="9gQ-Ee-c50"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionButton" destination="gfv-Gs-EMg" id="oVK-Dz-ElT"/>
+                        <outlet property="text" destination="QO1-7R-8ib" id="QKR-H4-laS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ZU-pa-4Pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PcA-1A-skJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2505" y="203"/>
+        </scene>
+        <!--CountdownVC-->
+        <scene sceneID="ZgF-1q-Kls">
+            <objects>
+                <viewController id="gsS-Gf-fdc" customClass="CountdownVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D21-aP-bfq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Countdown 3" translatesAutoresizingMaskIntoConstraints="NO" id="tc9-bo-UMG">
+                                <rect key="frame" x="106" y="267" width="202" height="202"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-9t-dwU">
+                                <rect key="frame" x="35.000000000000007" y="80" width="117.66666666666669" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tc9-bo-UMG" firstAttribute="centerY" secondItem="D21-aP-bfq" secondAttribute="centerY" id="0K6-7Y-P6H"/>
+                            <constraint firstItem="tc9-bo-UMG" firstAttribute="centerX" secondItem="D21-aP-bfq" secondAttribute="centerX" id="5Mt-DG-mZi"/>
+                            <constraint firstItem="XXC-9t-dwU" firstAttribute="top" secondItem="Kr3-39-GKM" secondAttribute="top" constant="60" id="Bde-1U-fGo"/>
+                            <constraint firstItem="Kr3-39-GKM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XXC-9t-dwU" secondAttribute="trailing" constant="35" id="QbH-7w-Mko"/>
+                            <constraint firstItem="XXC-9t-dwU" firstAttribute="leading" secondItem="Kr3-39-GKM" secondAttribute="leading" constant="35" id="VhR-kX-9RL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kr3-39-GKM"/>
+                    </view>
+                    <connections>
+                        <outlet property="countdownImage" destination="tc9-bo-UMG" id="GWX-zA-WQa"/>
+                        <outlet property="topLineLabel" destination="XXC-9t-dwU" id="u2K-H1-iHJ"/>
+                        <segue destination="RdQ-tN-0jm" kind="presentation" identifier="CountdownToSession" id="elf-Ct-U9v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bU2-YG-8qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2505.7971014492755" y="889.4021739130435"/>
+        </scene>
+        <!--Session StartedVC-->
+        <scene sceneID="koM-4n-6Fn">
+            <objects>
+                <viewController id="RdQ-tN-0jm" customClass="SessionStartedVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fiw-xG-7Nz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqn-9c-Ldn" userLabel="NavBar">
+                                <rect key="frame" x="0.0" y="20" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38r-d4-aiH" userLabel="Right button">
+                                        <rect key="frame" x="365" y="15.666666666666664" width="29" height="29"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="x_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="RdQ-tN-0jm" eventType="touchUpInside" id="w3g-ES-6f6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="38r-d4-aiH" secondAttribute="trailing" constant="20" id="Q1Z-xX-pZA"/>
+                                    <constraint firstItem="38r-d4-aiH" firstAttribute="centerY" secondItem="Gqn-9c-Ldn" secondAttribute="centerY" id="Xz7-wr-C7b"/>
+                                    <constraint firstAttribute="height" constant="60" id="olu-r6-jsh"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Focus session in progress..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caz-bd-hPm">
+                                <rect key="frame" x="35" y="115" width="344" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="t9N-dM-fyT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:59" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-ZR-2s4">
+                                <rect key="frame" x="147" y="341.66666666666669" width="120" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="mrd-9J-q0n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfQ-AE-7zs" customClass="RectangleActionButton" customModule="FocusMe" customModuleProvider="target">
+                                <rect key="frame" x="82" y="631" width="250" height="55"/>
+                                <color key="backgroundColor" red="0.23075896501541138" green="0.82495737075805664" blue="0.5405958890914917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="5wr-bb-gXB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="i3t-tF-Ksk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playPauseButton:" destination="RdQ-tN-0jm" eventType="touchUpInside" id="J67-aa-znE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="caz-bd-hPm" firstAttribute="leading" secondItem="CJr-9e-2SK" secondAttribute="leading" constant="35" id="4fi-sA-IWh"/>
+                            <constraint firstItem="Gqn-9c-Ldn" firstAttribute="leading" secondItem="CJr-9e-2SK" secondAttribute="leading" id="9ba-Pl-wx0"/>
+                            <constraint firstItem="Gqn-9c-Ldn" firstAttribute="top" secondItem="CJr-9e-2SK" secondAttribute="top" id="HHc-oD-QT1"/>
+                            <constraint firstItem="Gqn-9c-Ldn" firstAttribute="trailing" secondItem="CJr-9e-2SK" secondAttribute="trailing" id="Ifn-3G-hRv"/>
+                            <constraint firstItem="caz-bd-hPm" firstAttribute="top" secondItem="Gqn-9c-Ldn" secondAttribute="bottom" constant="35" id="Rtx-mt-CcB"/>
+                            <constraint firstItem="ZHw-ZR-2s4" firstAttribute="centerY" secondItem="Fiw-xG-7Nz" secondAttribute="centerY" id="c8u-Oo-p6Y"/>
+                            <constraint firstAttribute="trailing" secondItem="caz-bd-hPm" secondAttribute="trailing" constant="35" id="d7m-vr-IiU"/>
+                            <constraint firstItem="CJr-9e-2SK" firstAttribute="bottom" secondItem="gfQ-AE-7zs" secondAttribute="bottom" constant="50" id="hNj-hL-AQL"/>
+                            <constraint firstItem="gfQ-AE-7zs" firstAttribute="centerX" secondItem="Fiw-xG-7Nz" secondAttribute="centerX" id="jCO-bU-0dB"/>
+                            <constraint firstItem="ZHw-ZR-2s4" firstAttribute="centerX" secondItem="Fiw-xG-7Nz" secondAttribute="centerX" id="zDs-NI-59c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CJr-9e-2SK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0jw-L4-7sa">
+                        <barButtonItem key="rightBarButtonItem" image="x_white" id="J6d-ke-QaW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelButton:" destination="RdQ-tN-0jm" id="HmW-qH-hR8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countdown" destination="ZHw-ZR-2s4" id="rIS-sT-2Ef"/>
+                        <outlet property="headerText" destination="caz-bd-hPm" id="Le4-N8-2g9"/>
+                        <outlet property="playPauseButtonOutlet" destination="gfQ-AE-7zs" id="S6c-qN-Zaq"/>
+                        <segue destination="5f8-O3-WCv" kind="presentation" identifier="sessionToGuess" id="jAA-FZ-lVF"/>
+                        <segue destination="Vel-8w-CYg" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="XdL-qI-Qwq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4f-bw-BsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vel-8w-CYg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2502.898550724638" y="1667.9347826086957"/>
+        </scene>
+        <!--Input GuessVC-->
+        <scene sceneID="0DB-lS-tLW">
+            <objects>
+                <viewController id="5f8-O3-WCv" customClass="InputGuessVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="se9-4H-w1X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03R-Na-0HN">
+                                <rect key="frame" x="38" y="40" width="64" height="49.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49.329999999999998" id="JW2-h1-t6N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="36"/>
+                                <color key="textColor" red="0.27450980392156865" green="0.93333333333333335" blue="0.65098039215686276" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many dings did you hear?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UH-DG-pb6">
+                                <rect key="frame" x="36" y="109" width="342" height="76.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JL5-Zw-gYU">
+                                <rect key="frame" x="229" y="686" width="135" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Done ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="5f8-O3-WCv" eventType="touchUpInside" id="OXP-oq-z73"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VR7-CI-NZv">
+                                <rect key="frame" x="50" y="228" width="314" height="422"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTh-yO-6P4">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLg-yM-EKg" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kLg-yM-EKg" secondAttribute="height" multiplier="1:1" id="U7q-db-2cZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="q2I-Bs-BN2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1K-Bs-HmJ" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="H1K-Bs-HmJ" secondAttribute="height" multiplier="1:1" id="zTH-e5-abd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="M27-AJ-MVN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDM-32-ULh" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.21658118758672285" green="0.68997026759337976" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="zDM-32-ULh" secondAttribute="height" multiplier="1:1" id="YX2-bD-9ri"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="H1g-3O-9yG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lgN-O9-uZn">
+                                        <rect key="frame" x="0.0" y="108" width="314" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epL-hA-PMF" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="epL-hA-PMF" secondAttribute="height" multiplier="1:1" id="vLd-tA-acI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="lBt-qA-zBA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-Df-btH" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="8qS-Ax-uhk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6s2-zA-yKa" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="gIb-vT-74A"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tVS-i1-DVs">
+                                        <rect key="frame" x="0.0" y="216" width="314" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJr-KI-XQV" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LJr-KI-XQV" secondAttribute="height" multiplier="1:1" id="pJY-gO-ZGp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="K4E-Is-p0h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY4-6y-Ahu" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="o1X-56-VyD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqi-zA-ztP" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="L0r-d8-LZD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KDH-a7-qZt">
+                                        <rect key="frame" x="0.0" y="324" width="314" height="98"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXv-lv-dLA" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="98" height="98"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bXv-lv-dLA" secondAttribute="height" multiplier="1:1" id="MmZ-p7-1Cd"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-ex-GIp" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="28"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="H84-pE-jmc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEY-T7-ZyT" customClass="calculatorButton" customModule="FocusMe" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="98" height="98"/>
+                                                <color key="backgroundColor" red="0.23137254901960785" green="0.59999999999999998" blue="0.9882352941176471" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <state key="normal" title="Delete">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundButton" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="deleteNumber:" destination="5f8-O3-WCv" eventType="touchUpInside" id="RNY-vH-RJZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="03R-Na-0HN" firstAttribute="leading" secondItem="S4O-Bo-mrL" secondAttribute="leading" constant="38" id="0pE-0Z-IwP"/>
+                            <constraint firstItem="S4O-Bo-mrL" firstAttribute="trailing" secondItem="VR7-CI-NZv" secondAttribute="trailing" constant="50" id="3Rj-mM-HoH"/>
+                            <constraint firstItem="VR7-CI-NZv" firstAttribute="leading" secondItem="S4O-Bo-mrL" secondAttribute="leading" constant="50" id="89c-p8-FLT"/>
+                            <constraint firstItem="0UH-DG-pb6" firstAttribute="leading" secondItem="S4O-Bo-mrL" secondAttribute="leading" constant="36" id="Jpv-HF-kLz"/>
+                            <constraint firstItem="03R-Na-0HN" firstAttribute="top" secondItem="S4O-Bo-mrL" secondAttribute="top" constant="20" id="UmT-w5-GSt"/>
+                            <constraint firstItem="S4O-Bo-mrL" firstAttribute="bottom" secondItem="JL5-Zw-gYU" secondAttribute="bottom" constant="20" id="dpI-az-mrx"/>
+                            <constraint firstItem="0UH-DG-pb6" firstAttribute="top" secondItem="03R-Na-0HN" secondAttribute="bottom" constant="20" id="f5e-zi-MX9"/>
+                            <constraint firstItem="S4O-Bo-mrL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="03R-Na-0HN" secondAttribute="trailing" constant="100" id="fQa-Bh-L4f"/>
+                            <constraint firstItem="S4O-Bo-mrL" firstAttribute="trailing" secondItem="JL5-Zw-gYU" secondAttribute="trailing" constant="50" id="ien-m7-woJ"/>
+                            <constraint firstItem="VR7-CI-NZv" firstAttribute="centerY" secondItem="se9-4H-w1X" secondAttribute="centerY" constant="71" id="jP4-CO-nDJ"/>
+                            <constraint firstAttribute="trailing" secondItem="0UH-DG-pb6" secondAttribute="trailing" constant="36" id="oW9-v4-y70"/>
+                            <constraint firstItem="JL5-Zw-gYU" firstAttribute="leading" relation="lessThanOrEqual" secondItem="S4O-Bo-mrL" secondAttribute="leading" constant="229" id="t0y-Tn-44J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S4O-Bo-mrL"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttons" destination="kLg-yM-EKg" id="zyh-85-Lzg"/>
+                        <outlet property="header" destination="0UH-DG-pb6" id="wtM-V0-9TM"/>
+                        <outlet property="inputNumberLabel" destination="03R-Na-0HN" id="iK6-Lv-Gau"/>
+                        <outlet property="stackView" destination="VR7-CI-NZv" id="0X6-DM-9Nc"/>
+                        <segue destination="9b5-eq-YbJ" kind="presentation" identifier="InputGuesssToResult" id="S4w-MZ-tWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO1-o5-WLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3252" y="1668"/>
+        </scene>
+        <!--See ResultVC-->
+        <scene sceneID="1Qm-Nz-f6L">
+            <objects>
+                <viewController id="9b5-eq-YbJ" customClass="SeeResultVC" customModule="FocusMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fze-IO-i1F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128 of 136 dings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHu-yZ-pau">
+                                <rect key="frame" x="34.999999999999986" y="90" width="231.66666666666663" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lkg-y3-gJW">
+                                <rect key="frame" x="34.999999999999986" y="221" width="203.66666666666663" height="98"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88% accuracy." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-cG-7Kc">
+                                        <rect key="frame" x="0.0" y="0.0" width="203.66666666666666" height="44"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice work!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-2c-uwf">
+                                        <rect key="frame" x="0.0" y="54" width="203.66666666666666" height="44"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-EX-ABc" customClass="RectangleActionButton" customModule="FocusMe" customModuleProvider="target">
+                                <rect key="frame" x="82" y="621" width="250" height="55"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.80000000000000004" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="68n-yp-Ny9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="t6k-Fp-3ET"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveSession:" destination="9b5-eq-YbJ" eventType="touchUpInside" id="rfG-O2-a6F"/>
+                                    <segue destination="cBF-IT-aic" kind="unwind" unwindAction="unwindFromResultToMainWithSegue:" id="Wd2-KM-FaV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0rP-7F-GhM" firstAttribute="bottom" secondItem="gxn-EX-ABc" secondAttribute="bottom" constant="60" id="He0-YC-oFc"/>
+                            <constraint firstItem="Lkg-y3-gJW" firstAttribute="leading" secondItem="0rP-7F-GhM" secondAttribute="leading" constant="35" id="TmB-IK-3p1"/>
+                            <constraint firstItem="xHu-yZ-pau" firstAttribute="top" secondItem="0rP-7F-GhM" secondAttribute="top" constant="70" id="VAA-ji-r1P"/>
+                            <constraint firstItem="Lkg-y3-gJW" firstAttribute="top" secondItem="xHu-yZ-pau" secondAttribute="bottom" constant="87" id="XWH-WP-w7j"/>
+                            <constraint firstItem="0rP-7F-GhM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xHu-yZ-pau" secondAttribute="trailing" constant="35" id="fkF-g6-dZA"/>
+                            <constraint firstItem="xHu-yZ-pau" firstAttribute="leading" secondItem="0rP-7F-GhM" secondAttribute="leading" constant="35" id="hli-7k-Cfm"/>
+                            <constraint firstItem="gxn-EX-ABc" firstAttribute="centerX" secondItem="Fze-IO-i1F" secondAttribute="centerX" id="uuF-8v-ax2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0rP-7F-GhM"/>
+                    </view>
+                    <connections>
+                        <outlet property="accuracyLabel" destination="lSr-cG-7Kc" id="2Pc-LY-Bz1"/>
+                        <outlet property="doneButton" destination="gxn-EX-ABc" id="DCF-Hk-a0x"/>
+                        <outlet property="guessOutOfLabel" destination="xHu-yZ-pau" id="tpC-MF-Rgo"/>
+                        <outlet property="niceWorkLabel" destination="0eO-2c-uwf" id="2NG-RI-5Nn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i51-gm-sZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cBF-IT-aic" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4032" y="1668"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Countdown 3" width="202" height="202"/>
+        <image name="help_white" width="42" height="42"/>
+        <image name="x_grey" width="29" height="29"/>
+        <image name="x_white" width="29" height="29"/>
+    </resources>
+</document>

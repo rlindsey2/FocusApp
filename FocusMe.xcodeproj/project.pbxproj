@@ -8,22 +8,66 @@
 
 /* Begin PBXBuildFile section */
 		9D008B802024586500165C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B7F2024586500165C87 /* AppDelegate.swift */; };
-		9D008B822024586500165C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B812024586500165C87 /* ViewController.swift */; };
 		9D008B852024586500165C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D008B832024586500165C87 /* Main.storyboard */; };
 		9D008B882024586500165C87 /* FocusMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B862024586500165C87 /* FocusMe.xcdatamodeld */; };
 		9D008B8A2024586500165C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D008B892024586500165C87 /* Assets.xcassets */; };
 		9D008B8D2024586500165C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D008B8B2024586500165C87 /* LaunchScreen.storyboard */; };
+		9D008B9C20253C0C00165C87 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B9B20253C0C00165C87 /* MainVC.swift */; };
+		9D008B9E20253D3A00165C87 /* CountdownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B9D20253D3A00165C87 /* CountdownVC.swift */; };
+		9D008BA4202542C100165C87 /* SessionStartedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008BA3202542C100165C87 /* SessionStartedVC.swift */; };
+		9D008BA620269BDE00165C87 /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008BA520269BDE00165C87 /* AudioModel.swift */; };
+		9D008BAA2026A0E900165C87 /* Ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D008BA92026A0E900165C87 /* Ding.wav */; };
+		9D00ED6E2040B83900DB84C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D00ED6D2040B83900DB84C5 /* GoogleService-Info.plist */; };
+		9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0328D9206037B3000AE6BB /* SwipingController.swift */; };
+		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
+		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
+		9D54B584207039B500C359EE /* calculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B583207039B500C359EE /* calculatorButton.swift */; };
+		9D7C8A322035C9FE0057989F /* landscapeBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */; };
+		9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E99552045E40C00C09A39 /* backgroundImages.swift */; };
+		9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */; };
+		9DC22550202CA48000D5D9AA /* SeeResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2254F202CA48000D5D9AA /* SeeResultVC.swift */; };
+		9DC22552202DD33E00D5D9AA /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22551202DD33E00D5D9AA /* LevelModel.swift */; };
+		9DC22554202DDCE100D5D9AA /* AccuracyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22553202DDCE100D5D9AA /* AccuracyLogic.swift */; };
+		9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2255C202E180000D5D9AA /* FirstLaunch.swift */; };
+		9DC2256F202F5A7000D5D9AA /* MainVCResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */; };
+		9DC22572202F69C900D5D9AA /* RectangleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */; };
+		9DE166CE2047208400067CEE /* InstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE166CD2047208400067CEE /* InstructionsVC.swift */; };
+		9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF37F6205F26590053D0EF /* PageCell.swift */; };
+		D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D008B7C2024586500165C87 /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D008B7F2024586500165C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D008B812024586500165C87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D008B842024586500165C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D008B872024586500165C87 /* FocusMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FocusMe.xcdatamodel; sourceTree = "<group>"; };
 		9D008B892024586500165C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D008B8C2024586500165C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D008B8E2024586500165C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D008B9B20253C0C00165C87 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		9D008B9D20253D3A00165C87 /* CountdownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownVC.swift; sourceTree = "<group>"; };
+		9D008BA3202542C100165C87 /* SessionStartedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStartedVC.swift; sourceTree = "<group>"; };
+		9D008BA520269BDE00165C87 /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		9D008BA92026A0E900165C87 /* Ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ding.wav; sourceTree = "<group>"; };
+		9D00ED6D2040B83900DB84C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D0328D9206037B3000AE6BB /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
+		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
+		9D54B583207039B500C359EE /* calculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorButton.swift; sourceTree = "<group>"; };
+		9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = landscapeBackground.mp3; sourceTree = "<group>"; };
+		9D8E99552045E40C00C09A39 /* backgroundImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = backgroundImages.swift; path = "FocusMe/View/Custom views/backgroundImages.swift"; sourceTree = SOURCE_ROOT; };
+		9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGuessVC.swift; sourceTree = "<group>"; };
+		9DC2254F202CA48000D5D9AA /* SeeResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeResultVC.swift; sourceTree = "<group>"; };
+		9DC22551202DD33E00D5D9AA /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
+		9DC22553202DDCE100D5D9AA /* AccuracyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyLogic.swift; sourceTree = "<group>"; };
+		9DC2255C202E180000D5D9AA /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
+		9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCResultCell.swift; sourceTree = "<group>"; };
+		9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleActionButton.swift; sourceTree = "<group>"; };
+		9DE166CD2047208400067CEE /* InstructionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVC.swift; sourceTree = "<group>"; };
+		9DEF37F6205F26590053D0EF /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.release.xcconfig"; sourceTree = "<group>"; };
+		E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +75,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6FDCC11C582202D7DBFA8BD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D008B732024586500165C87 = {
 			isa = PBXGroup;
 			children = (
 				9D008B7E2024586500165C87 /* FocusMe */,
 				9D008B7D2024586500165C87 /* Products */,
+				ECF245344995D1FDF86C6A72 /* Pods */,
+				6FDCC11C582202D7DBFA8BD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +111,108 @@
 		9D008B7E2024586500165C87 /* FocusMe */ = {
 			isa = PBXGroup;
 			children = (
+				9D57BF12203031DB0015032B /* Model */,
+				9DC2256C202F59E100D5D9AA /* View */,
+				9D008B9A20252E3800165C87 /* Controller */,
+				9D57BF132030322B0015032B /* Assets */,
+				9DC2255F202E496C00D5D9AA /* Core data */,
+				9D57BF11203031BC0015032B /* Services */,
 				9D008B7F2024586500165C87 /* AppDelegate.swift */,
-				9D008B812024586500165C87 /* ViewController.swift */,
-				9D008B832024586500165C87 /* Main.storyboard */,
-				9D008B892024586500165C87 /* Assets.xcassets */,
-				9D008B8B2024586500165C87 /* LaunchScreen.storyboard */,
 				9D008B8E2024586500165C87 /* Info.plist */,
-				9D008B862024586500165C87 /* FocusMe.xcdatamodeld */,
+				9D00ED6D2040B83900DB84C5 /* GoogleService-Info.plist */,
 			);
 			path = FocusMe;
+			sourceTree = "<group>";
+		};
+		9D008B9A20252E3800165C87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D0328D9206037B3000AE6BB /* SwipingController.swift */,
+				9D008B9B20253C0C00165C87 /* MainVC.swift */,
+				9DE166CD2047208400067CEE /* InstructionsVC.swift */,
+				9D008B9D20253D3A00165C87 /* CountdownVC.swift */,
+				9D008BA3202542C100165C87 /* SessionStartedVC.swift */,
+				9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */,
+				9DC2254F202CA48000D5D9AA /* SeeResultVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D57BF11203031BC0015032B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9D57BF12203031DB0015032B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9DC2255C202E180000D5D9AA /* FirstLaunch.swift */,
+				9DC22553202DDCE100D5D9AA /* AccuracyLogic.swift */,
+				9D008BA520269BDE00165C87 /* AudioModel.swift */,
+				9DC22551202DD33E00D5D9AA /* LevelModel.swift */,
+				9D36FCA32061018200554D03 /* OnboardingPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D57BF132030322B0015032B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9D008B892024586500165C87 /* Assets.xcassets */,
+				9DC2255E202E494400D5D9AA /* Audio files */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		9DC2255B202E14A700D5D9AA /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				9D54B583207039B500C359EE /* calculatorButton.swift */,
+				9D8E99552045E40C00C09A39 /* backgroundImages.swift */,
+				9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */,
+				9D4B25F220646A3B008C9FA9 /* colours.swift */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		9DC2255E202E494400D5D9AA /* Audio files */ = {
+			isa = PBXGroup;
+			children = (
+				9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */,
+				9D008BA92026A0E900165C87 /* Ding.wav */,
+			);
+			path = "Audio files";
+			sourceTree = "<group>";
+		};
+		9DC2255F202E496C00D5D9AA /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				9D008B862024586500165C87 /* FocusMe.xcdatamodeld */,
+			);
+			path = "Core data";
+			sourceTree = "<group>";
+		};
+		9DC2256C202F59E100D5D9AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D008B8B2024586500165C87 /* LaunchScreen.storyboard */,
+				9D008B832024586500165C87 /* Main.storyboard */,
+				9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */,
+				9DEF37F6205F26590053D0EF /* PageCell.swift */,
+				9DC2255B202E14A700D5D9AA /* Custom views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECF245344995D1FDF86C6A72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */,
+				D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +222,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D008B912024586500165C87 /* Build configuration list for PBXNativeTarget "FocusMe" */;
 			buildPhases = (
+				F55835CF10ADEC2F9C3251B6 /* [CP] Check Pods Manifest.lock */,
 				9D008B782024586500165C87 /* Sources */,
 				9D008B792024586500165C87 /* Frameworks */,
 				9D008B7A2024586500165C87 /* Resources */,
+				180757F76311B57E61CBD3B1 /* [CP] Embed Pods Frameworks */,
+				1551A4C0331353ED5D948310 /* [CP] Copy Pods Resources */,
+				9D00ED6F2040DD3B00DB84C5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -100,6 +252,11 @@
 					9D008B7B2024586500165C87 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,6 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7C8A322035C9FE0057989F /* landscapeBackground.mp3 in Resources */,
+				9D00ED6E2040B83900DB84C5 /* GoogleService-Info.plist in Resources */,
+				9D008BAA2026A0E900165C87 /* Ding.wav in Resources */,
 				9D008B8D2024586500165C87 /* LaunchScreen.storyboard in Resources */,
 				9D008B8A2024586500165C87 /* Assets.xcassets in Resources */,
 				9D008B852024586500165C87 /* Main.storyboard in Resources */,
@@ -134,14 +294,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1551A4C0331353ED5D948310 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		180757F76311B57E61CBD3B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D00ED6F2040DD3B00DB84C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+		};
+		F55835CF10ADEC2F9C3251B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FocusMe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D008B782024586500165C87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D008B822024586500165C87 /* ViewController.swift in Sources */,
+				9DE166CE2047208400067CEE /* InstructionsVC.swift in Sources */,
+				9DC22552202DD33E00D5D9AA /* LevelModel.swift in Sources */,
+				9DC22572202F69C900D5D9AA /* RectangleActionButton.swift in Sources */,
+				9D008BA620269BDE00165C87 /* AudioModel.swift in Sources */,
+				9D54B584207039B500C359EE /* calculatorButton.swift in Sources */,
+				9DC2256F202F5A7000D5D9AA /* MainVCResultCell.swift in Sources */,
 				9D008B882024586500165C87 /* FocusMe.xcdatamodeld in Sources */,
+				9D008B9E20253D3A00165C87 /* CountdownVC.swift in Sources */,
+				9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */,
+				9DC22554202DDCE100D5D9AA /* AccuracyLogic.swift in Sources */,
+				9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */,
 				9D008B802024586500165C87 /* AppDelegate.swift in Sources */,
+				9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */,
+				9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */,
+				9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */,
+				9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */,
+				9D008B9C20253C0C00165C87 /* MainVC.swift in Sources */,
+				9D008BA4202542C100165C87 /* SessionStartedVC.swift in Sources */,
+				9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */,
+				9DC22550202CA48000D5D9AA /* SeeResultVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +444,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -276,21 +522,24 @@
 		};
 		9D008B922024586500165C87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F829PDC447;
 				INFOPLIST_FILE = FocusMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9D008B932024586500165C87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = test.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
