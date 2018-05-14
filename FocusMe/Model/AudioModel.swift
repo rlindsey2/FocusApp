@@ -14,17 +14,19 @@ class MusicLogic {
     var bellSoundPlayer = AVAudioPlayer()
     
     var timer = Timer()
-    var randomNumberInReset: Int?
     var bellCount = 0
-    var timerStartTime: Date?
-    var newTimerDuration = 0.0
-    var totalPauseTimePeriod = 0.0
     var playingState = false
     
     //for countdown
     var seconds = Int()
     var countdownTimer = Timer()
     var countdownNumber = String()
+    
+    private var randomNumberInReset: Int?
+    private var timerStartTime: Date?
+    private var newTimerDuration = 0.0
+    private var totalPauseTimePeriod = 0.0
+    
     
     init() {
         

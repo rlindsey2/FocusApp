@@ -28,7 +28,7 @@ class MainVC: UIViewController {
     
     func fireTimer() {
     
-        typingAnimationTimer = Timer.scheduledTimer(timeInterval: 0.15, target: self, selector: #selector(typeLetter), userInfo: nil, repeats: true)
+        typingAnimationTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(typeLetter), userInfo: nil, repeats: true)
     }
     
     @objc func typeLetter() {
@@ -145,7 +145,7 @@ class MainVC: UIViewController {
         if segue.identifier == "MainToCount" {
             if let destinationViewController = segue.destination as? CountdownVC {
                 destinationViewController.managedObjectContext = persistentContainer.viewContext
-                //Crashlytics.sharedInstance().crash()
+//                Crashlytics.sharedInstance().crash()
             }
         }
     }

@@ -11,38 +11,30 @@ import  CoreData
 
 class CountdownVC: UIViewController {
     
+    @IBOutlet weak var progressBar: ProgressBar!
     @IBOutlet weak var topLineLabel: UILabel!
-    @IBOutlet weak var countdownImage: UIImageView!
+    @IBOutlet weak var numberLabel: UILabel!
+ 
+    private var headerText = "Put your \nheadphones on."
+    private var countDownNumber = 3
     
-    private var text = "Put your \nheadphones on."
-
-    private var countDownStartingNumber = 3
-    private let countDownTimeInterval = 1.5
     private var timer: Timer?
-    
-    private var countDownCurrentValue: Int {
-        if countDownStartingNumber <= 1 {
-            invalidateTimer()
-            return 0
-        }
-        
-        return countDownStartingNumber
-    }
-    
     private let music = MusicLogic()
     
     var managedObjectContext: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setCustomLightBackgroundImage()
         
-        let returningHeaderMutableString = NSMutableAttributedString(
-            string: text,
+        self.setCustomLightBackgroundImage()
+        setTimer()
+        
+        let headerMutableString = NSMutableAttributedString(
+            string: headerText,
             attributes: [NSAttributedStringKey.font:UIFont(
                 name: "Avenir-Light",
                 size: 32.0)!])
-        returningHeaderMutableString.addAttribute(
+        headerMutableString.addAttribute(
             NSAttributedStringKey.font,
             value: UIFont(
                 name: "Avenir-Medium",
@@ -51,67 +43,38 @@ class CountdownVC: UIViewController {
                 location: 9,
                 length: 14))
         
-        topLineLabel.attributedText = returningHeaderMutableString
+        topLineLabel.attributedText = headerMutableString
         topLineLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        let countDownTime = Double(countDownStartingNumber) * countDownTimeInterval
-        Timer.scheduledTimer(timeInterval: TimeInterval(countDownTime),
-                             target: self,
-                             selector: #selector(self.segue),
-                             userInfo: nil,
-                             repeats: false)
-        
-        
-        /*
-         Delete core data
-        // Create Fetch Request
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedSession")
-        
-        // Create Batch Delete Request
-        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        
-        do {
-            try managedObjectContext?.execute(batchDeleteRequest)
-            
-        } catch {
-            // Error Handling
-        }
-         */
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        count()
-    }
-    
-    func count() {
-        
+    func setTimer() {
+        let countDownTimeInterval = 1.9
         invalidateTimer()
-        
-        if countDownStartingNumber == 0 {
-            updateText(value: 0)
-            return
-        }
         
         timer = Timer.scheduledTimer(timeInterval: countDownTimeInterval,
                                      target: self,
                                      selector: #selector(updateValue),
                                      userInfo: nil,
                                      repeats: true)
+        setupProgressBar()
+    }
+ 
+    
+    @objc private func setupProgressBar() {
+        progressBar.resetAnimation()
+        progressBar.timerDuration = Int(6)
+        progressBar.start()
     }
     
-    @objc func updateValue() {
-        countDownStartingNumber -= 1
-        updateText(value: countDownCurrentValue)
-        
-    }
-    
-    func updateText(value: Int) {
 
-        if countDownStartingNumber == 2 {
-            text = "Close your eyes \nfor \(Int(round(music.backgroundSoundPlayer.duration / 60))) min."
+    @objc func updateValue() {
+
+        countDownNumber -= 1
+        
+        if countDownNumber == 2 {
+            headerText = "Close your eyes \nfor \(Int(round(music.backgroundSoundPlayer.duration / 60))) min."
             let countdown2 = NSMutableAttributedString(
-                string: text,
+                string: headerText,
                 attributes: [NSAttributedStringKey.font:UIFont(
                     name: "Avenir-Light",
                     size: 32.0)!])
@@ -125,16 +88,14 @@ class CountdownVC: UIViewController {
                     length: 11))
             
             topLineLabel.attributedText = countdown2
-            
-            let imageName = "Countdown 2.png"
-            let image = UIImage(named: imageName)
-            countdownImage.image = image
+            numberLabel.text = String(countDownNumber)
         }
-        if countDownStartingNumber == 1 {
+        
+        if countDownNumber == 1 {
             
-            text = "Count the \nchimes you hear."
+            headerText = "Count the \nchimes you hear."
             let countdown3 = NSMutableAttributedString(
-                string: text,
+                string: headerText,
                 attributes: [NSAttributedStringKey.font:UIFont(
                     name: "Avenir-Light",
                     size: 32.0)!])
@@ -148,14 +109,18 @@ class CountdownVC: UIViewController {
                     length: 15))
             
             topLineLabel.attributedText = countdown3
+            numberLabel.text = String(countDownNumber)
+        }
+        
+        if countDownNumber == 0 {
             
-            let imageName = "Countdown 1.png"
-            let image = UIImage(named: imageName)
-            countdownImage.image = image
+            invalidateTimer()
+            self.segue()
         }
     }
     
     func invalidateTimer() {
+        
         timer?.invalidate()
         timer = nil
     }

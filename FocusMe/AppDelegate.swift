@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let firstLaunch = FirstLaunch(userDefaults: .standard, key: "com.any-suggestion.FirstLaunch.WasLaunchedBefore")
         
-//        if let _ = UserDefaults.standard.value(forKey: "opened") {
         if firstLaunch.isFirstLaunch {
             print("first app launch")
             
@@ -41,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //go straight to main
             print("not first app launch")
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainVC")
+            
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }

@@ -22,6 +22,7 @@
 		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
 		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
 		9D54B584207039B500C359EE /* calculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B583207039B500C359EE /* calculatorButton.swift */; };
+		9D5B3F08207D324400A5E0AC /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B3F07207D324400A5E0AC /* ProgressBar.swift */; };
 		9D7C8A322035C9FE0057989F /* landscapeBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */; };
 		9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E99552045E40C00C09A39 /* backgroundImages.swift */; };
 		9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */; };
@@ -31,6 +32,9 @@
 		9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2255C202E180000D5D9AA /* FirstLaunch.swift */; };
 		9DC2256F202F5A7000D5D9AA /* MainVCResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */; };
 		9DC22572202F69C900D5D9AA /* RectangleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */; };
+		9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */; };
+		9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */; };
+		9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */; };
 		9DE166CE2047208400067CEE /* InstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE166CD2047208400067CEE /* InstructionsVC.swift */; };
 		9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF37F6205F26590053D0EF /* PageCell.swift */; };
 		D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */; };
@@ -54,6 +58,7 @@
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
 		9D54B583207039B500C359EE /* calculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorButton.swift; sourceTree = "<group>"; };
+		9D5B3F07207D324400A5E0AC /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = landscapeBackground.mp3; sourceTree = "<group>"; };
 		9D8E99552045E40C00C09A39 /* backgroundImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = backgroundImages.swift; path = "FocusMe/View/Custom views/backgroundImages.swift"; sourceTree = SOURCE_ROOT; };
 		9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGuessVC.swift; sourceTree = "<group>"; };
@@ -63,6 +68,10 @@
 		9DC2255C202E180000D5D9AA /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCResultCell.swift; sourceTree = "<group>"; };
 		9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleActionButton.swift; sourceTree = "<group>"; };
+		9DD92C9D20A1869F00E8CF4B /* FocusMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FocusMe.entitlements; sourceTree = "<group>"; };
+		9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
+		9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		9DE166CD2047208400067CEE /* InstructionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVC.swift; sourceTree = "<group>"; };
 		9DEF37F6205F26590053D0EF /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */,
+				9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,7 @@
 		6FDCC11C582202D7DBFA8BD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */,
 				A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */,
 			);
 			name = Frameworks;
@@ -111,6 +122,7 @@
 		9D008B7E2024586500165C87 /* FocusMe */ = {
 			isa = PBXGroup;
 			children = (
+				9DD92C9D20A1869F00E8CF4B /* FocusMe.entitlements */,
 				9D57BF12203031DB0015032B /* Model */,
 				9DC2256C202F59E100D5D9AA /* View */,
 				9D008B9A20252E3800165C87 /* Controller */,
@@ -141,6 +153,7 @@
 		9D57BF11203031BC0015032B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9DD92CA420A2282200E8CF4B /* HealthKit */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -199,11 +212,21 @@
 			children = (
 				9D008B8B2024586500165C87 /* LaunchScreen.storyboard */,
 				9D008B832024586500165C87 /* Main.storyboard */,
+				9D5B3F07207D324400A5E0AC /* ProgressBar.swift */,
 				9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */,
 				9DEF37F6205F26590053D0EF /* PageCell.swift */,
 				9DC2255B202E14A700D5D9AA /* Custom views */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9DD92CA420A2282200E8CF4B /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */,
+				9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		ECF245344995D1FDF86C6A72 /* Pods */ = {
@@ -245,8 +268,11 @@
 		9D008B742024586500165C87 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Test,
+				);
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Focus me";
 				TargetAttributes = {
 					9D008B7B2024586500165C87 = {
@@ -254,6 +280,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
 								enabled = 1;
 							};
 						};
@@ -377,12 +406,15 @@
 				9D008B882024586500165C87 /* FocusMe.xcdatamodeld in Sources */,
 				9D008B9E20253D3A00165C87 /* CountdownVC.swift in Sources */,
 				9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */,
+				9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */,
 				9DC22554202DDCE100D5D9AA /* AccuracyLogic.swift in Sources */,
 				9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */,
+				9D5B3F08207D324400A5E0AC /* ProgressBar.swift in Sources */,
 				9D008B802024586500165C87 /* AppDelegate.swift in Sources */,
 				9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */,
 				9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */,
 				9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */,
+				9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */,
 				9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */,
 				9D008B9C20253C0C00165C87 /* MainVC.swift in Sources */,
 				9D008BA4202542C100165C87 /* SessionStartedVC.swift in Sources */,
@@ -427,6 +459,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -434,6 +467,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -461,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -484,6 +518,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -491,6 +526,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -512,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -525,6 +561,7 @@
 			baseConfigurationReference = E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FocusMe/FocusMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F829PDC447;
@@ -542,6 +579,7 @@
 			baseConfigurationReference = D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FocusMe/FocusMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F829PDC447;
 				INFOPLIST_FILE = FocusMe/Info.plist;

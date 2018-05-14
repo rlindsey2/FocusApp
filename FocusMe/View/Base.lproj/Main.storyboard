@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BNQ-9v-cHc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BNQ-9v-cHc">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Black</string>
-            <string>Avenir-Heavy</string>
-            <string>Avenir-Light</string>
-            <string>Avenir-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="7Ye-G0-KmO">
@@ -194,7 +186,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-Gs-EMg" customClass="RectangleActionButton" customModule="FocusMe" customModuleProvider="target">
-                                <rect key="frame" x="82" y="631" width="250" height="55"/>
+                                <rect key="frame" x="82" y="601" width="250" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="7jL-ew-oWY"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="tA7-Wi-sJf"/>
@@ -213,18 +205,30 @@
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-bx-lPq">
+                                <rect key="frame" x="141" y="681" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="133" id="7FF-CQ-ah4"/>
+                                </constraints>
+                                <state key="normal" title="Authorize health kit"/>
+                                <connections>
+                                    <action selector="authorizeHealthKitButton:" destination="oEa-2r-aFb" eventType="touchUpInside" id="SFX-Bw-Luk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QO1-7R-8ib" firstAttribute="top" secondItem="7Zu-3w-RWk" secondAttribute="bottom" constant="30" id="HGH-lp-0by"/>
                             <constraint firstItem="db8-Az-fUM" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="7Zu-3w-RWk" secondAttribute="trailing" constant="150" id="IHa-YP-CAt"/>
+                            <constraint firstItem="db8-Az-fUM" firstAttribute="bottom" secondItem="lhf-bx-lPq" secondAttribute="bottom" constant="25" id="IkI-VE-G1a"/>
+                            <constraint firstItem="lhf-bx-lPq" firstAttribute="top" secondItem="gfv-Gs-EMg" secondAttribute="bottom" constant="25" id="Kdv-Xz-jlQ"/>
                             <constraint firstItem="7Zu-3w-RWk" firstAttribute="leading" secondItem="db8-Az-fUM" secondAttribute="leading" constant="30" id="NZs-Ab-vif"/>
                             <constraint firstItem="gfv-Gs-EMg" firstAttribute="centerX" secondItem="Kzg-LG-Amd" secondAttribute="centerX" id="YNw-Am-4RY"/>
                             <constraint firstItem="db8-Az-fUM" firstAttribute="trailing" secondItem="QO1-7R-8ib" secondAttribute="trailing" constant="30" id="YcE-wi-Mmc"/>
                             <constraint firstItem="gfv-Gs-EMg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QO1-7R-8ib" secondAttribute="bottom" constant="10" id="cig-72-GEF"/>
-                            <constraint firstItem="db8-Az-fUM" firstAttribute="bottom" secondItem="gfv-Gs-EMg" secondAttribute="bottom" constant="50" id="fOO-0r-xPf"/>
                             <constraint firstItem="QO1-7R-8ib" firstAttribute="leading" secondItem="db8-Az-fUM" secondAttribute="leading" constant="30" id="hKx-4v-MBP"/>
                             <constraint firstItem="7Zu-3w-RWk" firstAttribute="top" secondItem="db8-Az-fUM" secondAttribute="top" constant="50" id="hhS-ze-AmT"/>
+                            <constraint firstItem="lhf-bx-lPq" firstAttribute="centerX" secondItem="Kzg-LG-Amd" secondAttribute="centerX" id="nkn-qd-gjq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="db8-Az-fUM"/>
                     </view>
@@ -255,28 +259,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Countdown 3" translatesAutoresizingMaskIntoConstraints="NO" id="tc9-bo-UMG">
-                                <rect key="frame" x="106" y="267" width="202" height="202"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Put your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXC-9t-dwU">
                                 <rect key="frame" x="35.000000000000007" y="80" width="117.66666666666669" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7O-F8-Eza" customClass="ProgressBar" customModule="FocusMe" customModuleProvider="target">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Asx-a6-cUD"/>
+                                    <constraint firstAttribute="width" constant="250" id="aCp-y6-HKu"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-c9-ljx">
+                                <rect key="frame" x="194.66666666666666" y="339.33333333333331" width="25" height="57.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tc9-bo-UMG" firstAttribute="centerY" secondItem="D21-aP-bfq" secondAttribute="centerY" id="0K6-7Y-P6H"/>
-                            <constraint firstItem="tc9-bo-UMG" firstAttribute="centerX" secondItem="D21-aP-bfq" secondAttribute="centerX" id="5Mt-DG-mZi"/>
+                            <constraint firstItem="T7O-F8-Eza" firstAttribute="centerY" secondItem="D21-aP-bfq" secondAttribute="centerY" id="25d-FI-V27"/>
                             <constraint firstItem="XXC-9t-dwU" firstAttribute="top" secondItem="Kr3-39-GKM" secondAttribute="top" constant="60" id="Bde-1U-fGo"/>
+                            <constraint firstItem="ap6-c9-ljx" firstAttribute="centerY" secondItem="D21-aP-bfq" secondAttribute="centerY" id="HVW-OL-zrV"/>
                             <constraint firstItem="Kr3-39-GKM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XXC-9t-dwU" secondAttribute="trailing" constant="35" id="QbH-7w-Mko"/>
                             <constraint firstItem="XXC-9t-dwU" firstAttribute="leading" secondItem="Kr3-39-GKM" secondAttribute="leading" constant="35" id="VhR-kX-9RL"/>
+                            <constraint firstItem="ap6-c9-ljx" firstAttribute="centerX" secondItem="D21-aP-bfq" secondAttribute="centerX" id="Ywc-hx-yLe"/>
+                            <constraint firstItem="T7O-F8-Eza" firstAttribute="centerX" secondItem="D21-aP-bfq" secondAttribute="centerX" id="dNh-HK-hZP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kr3-39-GKM"/>
                     </view>
                     <connections>
-                        <outlet property="countdownImage" destination="tc9-bo-UMG" id="GWX-zA-WQa"/>
+                        <outlet property="numberLabel" destination="ap6-c9-ljx" id="XI9-rK-GOl"/>
+                        <outlet property="progressBar" destination="T7O-F8-Eza" id="A2n-Hc-1PB"/>
                         <outlet property="topLineLabel" destination="XXC-9t-dwU" id="u2K-H1-iHJ"/>
                         <segue destination="RdQ-tN-0jm" kind="presentation" identifier="CountdownToSession" id="elf-Ct-U9v"/>
                     </connections>
@@ -347,6 +365,13 @@
                                     <action selector="playPauseButton:" destination="RdQ-tN-0jm" eventType="touchUpInside" id="J67-aa-znE"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RHs-mj-LEB" customClass="ProgressBar" customModule="FocusMe" customModuleProvider="target">
+                                <rect key="frame" x="82" y="243" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="jCh-8d-fnr"/>
+                                    <constraint firstAttribute="width" constant="250" id="yNr-bn-Ret"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -355,8 +380,10 @@
                             <constraint firstItem="Gqn-9c-Ldn" firstAttribute="top" secondItem="CJr-9e-2SK" secondAttribute="top" id="HHc-oD-QT1"/>
                             <constraint firstItem="Gqn-9c-Ldn" firstAttribute="trailing" secondItem="CJr-9e-2SK" secondAttribute="trailing" id="Ifn-3G-hRv"/>
                             <constraint firstItem="caz-bd-hPm" firstAttribute="top" secondItem="Gqn-9c-Ldn" secondAttribute="bottom" constant="35" id="Rtx-mt-CcB"/>
+                            <constraint firstItem="RHs-mj-LEB" firstAttribute="centerY" secondItem="Fiw-xG-7Nz" secondAttribute="centerY" id="XEg-lW-q3Z"/>
                             <constraint firstItem="ZHw-ZR-2s4" firstAttribute="centerY" secondItem="Fiw-xG-7Nz" secondAttribute="centerY" id="c8u-Oo-p6Y"/>
                             <constraint firstAttribute="trailing" secondItem="caz-bd-hPm" secondAttribute="trailing" constant="35" id="d7m-vr-IiU"/>
+                            <constraint firstItem="RHs-mj-LEB" firstAttribute="centerX" secondItem="Fiw-xG-7Nz" secondAttribute="centerX" id="dZQ-8h-WJx"/>
                             <constraint firstItem="CJr-9e-2SK" firstAttribute="bottom" secondItem="gfQ-AE-7zs" secondAttribute="bottom" constant="50" id="hNj-hL-AQL"/>
                             <constraint firstItem="gfQ-AE-7zs" firstAttribute="centerX" secondItem="Fiw-xG-7Nz" secondAttribute="centerX" id="jCO-bU-0dB"/>
                             <constraint firstItem="ZHw-ZR-2s4" firstAttribute="centerX" secondItem="Fiw-xG-7Nz" secondAttribute="centerX" id="zDs-NI-59c"/>
@@ -375,6 +402,7 @@
                         <outlet property="countdown" destination="ZHw-ZR-2s4" id="rIS-sT-2Ef"/>
                         <outlet property="headerText" destination="caz-bd-hPm" id="Le4-N8-2g9"/>
                         <outlet property="playPauseButtonOutlet" destination="gfQ-AE-7zs" id="S6c-qN-Zaq"/>
+                        <outlet property="progressView" destination="RHs-mj-LEB" id="efe-S2-uSH"/>
                         <segue destination="5f8-O3-WCv" kind="presentation" identifier="sessionToGuess" id="jAA-FZ-lVF"/>
                         <segue destination="Vel-8w-CYg" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="XdL-qI-Qwq"/>
                     </connections>
@@ -727,7 +755,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Countdown 3" width="202" height="202"/>
         <image name="help_white" width="42" height="42"/>
         <image name="x_grey" width="29" height="29"/>
         <image name="x_white" width="29" height="29"/>

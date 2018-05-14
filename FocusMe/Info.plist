@@ -47,5 +47,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Track your meditation progress in the Health Kit App</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Track your meditation progress in the Health Kit App</string>
 </dict>
 </plist>

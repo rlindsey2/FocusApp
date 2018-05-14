@@ -12,6 +12,7 @@ import Firebase
 
 class SessionStartedVC: UIViewController, CAAnimationDelegate {
     
+    @IBOutlet weak var progressView: ProgressBar!
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var playPauseButtonOutlet: RectangleActionButton!
     @IBOutlet weak var headerText: UILabel!
@@ -22,20 +23,14 @@ class SessionStartedVC: UIViewController, CAAnimationDelegate {
     
     var managedObjectContext: NSManagedObjectContext?
     
-    private let circularPath = UIBezierPath(arcCenter: .zero, radius: 75, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
-    private let trackLayer = CAShapeLayer()
-    private let shapeLayer = CAShapeLayer()
-    private let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-    private let startValue = 0.02
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.setCustomDarkBackgroundImage()
+        progressView.timerDuration = music.seconds
+        progressView.start()
         
-        createCircle()
-        createCircleOverlay()
-        animateCircle()
+        self.setCustomDarkBackgroundImage()
         
         let updatedHeaderText = NSMutableAttributedString(
             string: textForHeader,
@@ -64,87 +59,31 @@ class SessionStartedVC: UIViewController, CAAnimationDelegate {
       
     }
     
-    
-    private func createCircle() {
-        
-        //create underlay circle
-        trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.white.cgColor
-        trackLayer.lineWidth = 10
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineCap = kCALineCapRound
-        trackLayer.position = view.center
-        view.layer.addSublayer(trackLayer)
-    }
-    
-    private func createCircleOverlay() {
-        
-        //set over the top circle
-        shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = #colorLiteral(red: 0.1607843137, green: 0.6274509804, blue: 0.4274509804, alpha: 1)
-        shapeLayer.lineWidth = 10
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.lineCap = kCALineCapRound
-        shapeLayer.position = view.center
-        shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
-        shapeLayer.strokeEnd = 0
-        view.layer.addSublayer(shapeLayer)
-    }
-    
-    @objc private func animateCircle() {
-        
-        let songDuration = CFTimeInterval(music.backgroundSoundPlayer.duration - music.backgroundSoundPlayer.currentTime)
-        
-        basicAnimation.fromValue = startValue
-        basicAnimation.toValue = 1
-        basicAnimation.duration = songDuration
-        basicAnimation.fillMode = kCAFillModeForwards
-        basicAnimation.isRemovedOnCompletion = false
-        shapeLayer.add(basicAnimation, forKey: "urSoBasic")
-    }
-    
-    
     @IBAction func playPauseButton(_ sender: UIButton) {
         music.playPause()
         
         if music.playingState == true {
+            progressView.start()
+            
             playPauseButtonOutlet.setTitle("Pause", for: .normal)
             runTimer()
-            
-            //start up the animcation from the current position to the end
-            let songDuration = CFTimeInterval(music.backgroundSoundPlayer.duration - music.backgroundSoundPlayer.currentTime)
-            let currentTime = music.backgroundSoundPlayer.currentTime
-            let totalTime = music.backgroundSoundPlayer.duration
-            let percentage = currentTime / totalTime
-            basicAnimation.fromValue = percentage + startValue
-            basicAnimation.toValue = 1
-            basicAnimation.isRemovedOnCompletion = false
-            basicAnimation.duration = songDuration
-            shapeLayer.add(basicAnimation, forKey: "urSoBasic")
-            
+    
         } else {
+            progressView.pause()
+            
             playPauseButtonOutlet.setTitle("Play", for: .normal)
             countdownTimer.invalidate()
             
-            //pause animation
-            let currentTime = music.backgroundSoundPlayer.currentTime
-            let totalTime = music.backgroundSoundPlayer.duration
-            let percentage = currentTime / totalTime
-            basicAnimation.fromValue = percentage + startValue
-            basicAnimation.toValue = percentage + startValue
-            basicAnimation.isRemovedOnCompletion = false
-            basicAnimation.duration = 0
-            shapeLayer.add(basicAnimation, forKey: "urSoBasic")
         }
     }
     
     @IBAction func cancelButton(_ sender: Any) {
         countdownTimer.invalidate()
-        
         music.backgroundSoundPlayer.stop()
         music.timer.invalidate()
+        saveToHK()
         Analytics.logEvent("session_cancelled", parameters: [
-            "time_left" : music.backgroundSoundPlayer.currentTime
+            "session_length" : music.backgroundSoundPlayer.currentTime
             ])
         
         performSegue(withIdentifier: "unwindToMain", sender: nil)
@@ -156,24 +95,55 @@ class SessionStartedVC: UIViewController, CAAnimationDelegate {
     }
     
     @objc func updateCountdown() {
-        
-        //If countdown gets to zero, cancel countdown timer and segue to input their guess. Else keep counting down the timer and update the label.
         if music.seconds == 0 {
-            
             countdownTimer.invalidate()
             performSegue(withIdentifier: "sessionToGuess", sender: nil)
-            
         } else {
             music.seconds -= 1
             countdown.text = music.timeString(time: TimeInterval(music.seconds))
         }
     }
     
+    private func authorizeHealthKit() {
+        
+        HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
+            
+            guard authorized else {
+                
+                let baseMessage = "HealthKit Authorization Failed"
+                
+                if let error = error {
+                    print("\(baseMessage). Reason: \(error.localizedDescription)")
+                } else {
+                    print(baseMessage)
+                }
+                
+                return
+            }
+            
+            print("HealthKit Successfully Authorized.")
+        }
+    }
+    
+    private func saveToHK() {
+        //If session is longer than 1 minute, save to healthkit, else return
+        let startTime = Date() - (music.backgroundSoundPlayer.currentTime)
+        let endTime = Date()
+        ProfileDataStore.saveMindfulSession(startDate: startTime, endDate: endTime)
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let bellCountActual = music.bellCount
         if let destinationViewController = segue.destination as? InputGuessVC {
-            Analytics.logEvent("session_complete", parameters: nil)
+            var eventCount = 0
+            if eventCount < 1 {
+                Analytics.logEvent("session_complete", parameters: nil)
+                eventCount += 1
+            }
+            
+            saveToHK()
             destinationViewController.bellCountActual = bellCountActual
             destinationViewController.managedObjectContext = managedObjectContext
         }

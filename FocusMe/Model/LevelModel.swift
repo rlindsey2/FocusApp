@@ -16,15 +16,17 @@ enum LevelDifficulty {
 
 class level {
     var level: LevelDifficulty
-    var BackgroundSong: String
-    var BellSound: String
+    var backgroundSound: String
+    let binauralBeatSound: String
+    var bellSound: String
     var randomUpperNumberDifficulty: Int
     var randomLowerNumberDifficulty: Int
     
-    init?(level: LevelDifficulty, BackgroundSong: String, BellSound: String, randomUpperNumberDifficulty: Int, randomLowerNumberDifficulty: Int) {
+    init?(level: LevelDifficulty, backgroundSound: String, binauralBeatSound: String, bellSound: String, randomUpperNumberDifficulty: Int, randomLowerNumberDifficulty: Int) {
         self.level = level
-        self.BackgroundSong = BackgroundSong
-        self.BellSound = BellSound
+        self.backgroundSound = backgroundSound
+        self.binauralBeatSound = binauralBeatSound
+        self.bellSound = bellSound
         self.randomUpperNumberDifficulty = randomUpperNumberDifficulty
         self.randomLowerNumberDifficulty = randomLowerNumberDifficulty
     }
