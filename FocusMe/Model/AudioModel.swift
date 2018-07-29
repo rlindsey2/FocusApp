@@ -15,9 +15,8 @@ class MusicLogic {
     
     var timer = Timer()
     var bellCount = 0
-    var playingState = false
+    var playingState = true
     
-    //for countdown
     var seconds = Int()
     var countdownTimer = Timer()
     var countdownNumber = String()
@@ -41,7 +40,6 @@ class MusicLogic {
             
             do {
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
-                
                 try AVAudioSession.sharedInstance().setActive(true)
                 
             } catch {
@@ -53,7 +51,7 @@ class MusicLogic {
             print(error)
         }
         
-//        backgroundSoundPlayer.currentTime = 760
+//        backgroundSoundPlayer.currentTime = 775
         //set countdown timer as duration of music minus the current time of the audio.
         seconds = Int(backgroundSoundPlayer.duration - backgroundSoundPlayer.currentTime)
     }
@@ -74,10 +72,12 @@ class MusicLogic {
     func randomBellTimer() {
         randomNumberInReset = Int(arc4random_uniform(20) + 5)
         
+        let currentTimePlusRandomNumber = (Int(backgroundSoundPlayer.currentTime) + randomNumberInReset!)
+        
         //Only make the bell sound if the total time is less than the background sound is still playing.
-        if (Int(backgroundSoundPlayer.currentTime) + randomNumberInReset!) < Int(backgroundSoundPlayer.duration) {
-            print("Random number is:" + String(describing: randomNumberInReset!))
+        if currentTimePlusRandomNumber < Int(backgroundSoundPlayer.duration) {
             
+            print("Random number is:" + String(describing: randomNumberInReset!))
             self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(randomNumberInReset!), target: self, selector: #selector(playBellSound), userInfo: nil, repeats: false)
             timerStartTime = Date()
         } else {

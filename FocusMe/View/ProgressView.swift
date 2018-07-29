@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ProgressBar: UIView, CAAnimationDelegate {
+class ProgressView: UIView, CAAnimationDelegate {
     
     fileprivate var animation = CABasicAnimation()
     fileprivate var animationDidStart = false
@@ -32,12 +32,6 @@ class ProgressBar: UIView, CAAnimationDelegate {
         loadFgProgressBar()
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadBgProgressBar()
-        loadFgProgressBar()
-    }
-    
     
     fileprivate func loadFgProgressBar() {
         
@@ -45,12 +39,12 @@ class ProgressBar: UIView, CAAnimationDelegate {
         let endAngle = CGFloat(3 * Double.pi / 2)
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
         let gradientMaskLayer = gradientMask()
-        fgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
+        fgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/1.5 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
         fgProgressLayer.backgroundColor = UIColor.clear.cgColor
         fgProgressLayer.fillColor = nil
+        fgProgressLayer.lineWidth = 1.0
         fgProgressLayer.lineCap = kCALineCapRound
         fgProgressLayer.strokeColor = UIColor.black.cgColor
-        fgProgressLayer.lineWidth = 10.0
         fgProgressLayer.strokeStart = 0.0
         fgProgressLayer.strokeEnd = 0.0
         
@@ -63,8 +57,8 @@ class ProgressBar: UIView, CAAnimationDelegate {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.locations = [0.0, 1.0]
-        let colorTop: AnyObject = UIColor.progressTop.cgColor
-        let colorBottom: AnyObject = UIColor.progressBottom.cgColor
+        let colorTop: AnyObject = UIColor.fadedWhite.cgColor
+        let colorBottom: AnyObject = UIColor.fadedWhite.cgColor
         let arrayOfColors: [AnyObject] = [colorTop, colorBottom]
         gradientLayer.colors = arrayOfColors
         
@@ -78,11 +72,11 @@ class ProgressBar: UIView, CAAnimationDelegate {
         let endAngle = CGFloat(3 * Double.pi / 2)
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
         let gradientMaskLayer = gradientMaskBg()
-        bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/2 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
+        bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/1.5 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
         bgProgressLayer.backgroundColor = UIColor.clear.cgColor
         bgProgressLayer.fillColor = nil
         bgProgressLayer.strokeColor = UIColor.black.cgColor
-        bgProgressLayer.lineWidth = 10.0
+        bgProgressLayer.lineWidth = 1.0
         bgProgressLayer.strokeStart = 0.0
         bgProgressLayer.strokeEnd = 1.0
         
@@ -95,8 +89,8 @@ class ProgressBar: UIView, CAAnimationDelegate {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.locations = [0.0, 1.0]
-        let colorTop: AnyObject = UIColor.white.cgColor
-        let colorBottom: AnyObject = UIColor.white.cgColor
+        let colorTop: AnyObject = UIColor.clear.cgColor
+        let colorBottom: AnyObject = UIColor.clear.cgColor
         let arrayOfColors: [AnyObject] = [colorTop, colorBottom]
         gradientLayer.colors = arrayOfColors
         
@@ -120,7 +114,7 @@ class ProgressBar: UIView, CAAnimationDelegate {
         
         fgProgressLayer.strokeEnd = 0.0
         animation.keyPath = "strokeEnd"
-        animation.fromValue = CGFloat(0.98)
+        animation.fromValue = CGFloat(0.99)
         animation.toValue = CGFloat(0.0)
         animation.duration = CFTimeInterval(timerDuration)
         animation.delegate = self
@@ -157,7 +151,5 @@ class ProgressBar: UIView, CAAnimationDelegate {
         fgProgressLayer.strokeEnd = 0.0
         animationDidStart = false
     }
-
-    
 }
 

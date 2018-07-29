@@ -8,34 +8,24 @@
 
 import Foundation
 
-enum LevelDifficulty {
-    case Beginner
-    case Intermediate
-    case Advanced
-}
-
-class level {
-    var level: LevelDifficulty
-    var backgroundSound: String
+struct Level {
+    let levelsToUnlock: Int
+    let percentageComplete: Double
+    let name: String
+    let subHeader: String
+    let duration: String
+    let image: String
+    let backgroundSound: String
     let binauralBeatSound: String
-    var bellSound: String
-    var randomUpperNumberDifficulty: Int
-    var randomLowerNumberDifficulty: Int
-    
-    init?(level: LevelDifficulty, backgroundSound: String, binauralBeatSound: String, bellSound: String, randomUpperNumberDifficulty: Int, randomLowerNumberDifficulty: Int) {
-        self.level = level
-        self.backgroundSound = backgroundSound
-        self.binauralBeatSound = binauralBeatSound
-        self.bellSound = bellSound
-        self.randomUpperNumberDifficulty = randomUpperNumberDifficulty
-        self.randomLowerNumberDifficulty = randomLowerNumberDifficulty
-    }
+    let dingSound: String
+    let randomUpperNumberDifficulty: UInt32
+    let randomLowerNumberDifficulty: UInt32
 }
 
-//Defines what is associated with every saved result
+
 struct SessionResult {
     let date: Date
-    let level: LevelDifficulty
+    let name: String
     let bellCountGuess: Int
     let bellCountActual: Int
     let score: Int

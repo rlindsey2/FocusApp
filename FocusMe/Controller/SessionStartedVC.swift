@@ -12,7 +12,7 @@ import Firebase
 
 class SessionStartedVC: UIViewController, CAAnimationDelegate {
     
-    @IBOutlet weak var progressView: ProgressBar!
+    @IBOutlet weak var progressView: ProgressView!
     @IBOutlet weak var countdown: UILabel!
     @IBOutlet weak var playPauseButtonOutlet: RectangleActionButton!
     @IBOutlet weak var headerText: UILabel!
@@ -60,15 +60,17 @@ class SessionStartedVC: UIViewController, CAAnimationDelegate {
     }
     
     @IBAction func playPauseButton(_ sender: UIButton) {
-        music.playPause()
+        //music.playPause()
         
-        if music.playingState == true {
+        if music.playingState != true {
+            music.playPause()
             progressView.start()
             
             playPauseButtonOutlet.setTitle("Pause", for: .normal)
             runTimer()
     
         } else {
+            music.playPause()
             progressView.pause()
             
             playPauseButtonOutlet.setTitle("Play", for: .normal)
@@ -126,7 +128,7 @@ class SessionStartedVC: UIViewController, CAAnimationDelegate {
     }
     
     private func saveToHK() {
-        //If session is longer than 1 minute, save to healthkit, else return
+    
         let startTime = Date() - (music.backgroundSoundPlayer.currentTime)
         let endTime = Date()
         ProfileDataStore.saveMindfulSession(startDate: startTime, endDate: endTime)

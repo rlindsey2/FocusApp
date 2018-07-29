@@ -19,7 +19,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonAction: RectangleActionButton!
     
-    private let headerLabelNew = "Hello there,\nWelcome to\nfocus app."
+    private let headerLabelNew = "Hello there,\nWelcome to\nfocus trainer."
     private let headerLabelReturning = "Welcome back. \nHere is your focus \nscore history"
     
     private var myText = Array("")

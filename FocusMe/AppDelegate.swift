@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             //go straight to main
             print("not first app launch")
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "MainVC")
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenVC")
             
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()

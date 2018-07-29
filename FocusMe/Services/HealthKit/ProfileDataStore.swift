@@ -11,9 +11,9 @@ class ProfileDataStore {
     
     class func saveMindfulSession(startDate: Date, endDate: Date) {
         
-        //1.  Make sure the mindfulSessino exists
+        //1.  Make sure the mindfulSession exists
         guard let mindfulType = HKCategoryType.categoryType(forIdentifier: .mindfulSession) else {
-            fatalError("Body Mass Index Type is no longer available in HealthKit")
+            fatalError("Mindful session is no longer available in HealthKit")
         }
 
         

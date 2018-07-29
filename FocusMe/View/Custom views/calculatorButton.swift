@@ -18,7 +18,7 @@ class calculatorButton: UIButton {
             }
         }
     }
-    
+
     override func prepareForInterfaceBuilder() {
         if roundButton {
             layer.cornerRadius = frame.height / 2
@@ -28,5 +28,6 @@ class calculatorButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = frame.height / 2
+        
     }
 }

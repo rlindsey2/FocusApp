@@ -17,7 +17,7 @@ class SeeResultVC: UIViewController {
     @IBOutlet weak var doneButton: RectangleActionButton!
     @IBOutlet weak var niceWorkLabel: UILabel!
     
-    private let levelOfSession = LevelDifficulty.Beginner
+    private let levelOfSession = "Beginner"
     var bellCountGuess: Int?
     var bellCountActual: Int?
     
@@ -46,7 +46,7 @@ class SeeResultVC: UIViewController {
         let result = SavedSession(context: managedObjectContext)
         
         result.date = Date()
-        result.level = "\(LevelDifficulty.Beginner)"
+        result.level = levelOfSession
         result.bellCountGuess = Int16(bellCountGuess!)
         result.bellCountActual = Int16(bellCountActual!)
         result.score = Int16(AccuracyLogic(guess: bellCountGuess!, actual: bellCountActual!))

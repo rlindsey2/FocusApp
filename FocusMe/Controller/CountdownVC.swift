@@ -11,7 +11,7 @@ import  CoreData
 
 class CountdownVC: UIViewController {
     
-    @IBOutlet weak var progressBar: ProgressBar!
+    @IBOutlet weak var progressBar: ProgressView!
     @IBOutlet weak var topLineLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
  

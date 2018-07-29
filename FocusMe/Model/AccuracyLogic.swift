@@ -10,19 +10,22 @@
 func AccuracyLogic(guess: Int, actual: Int) -> Int {
     var score = 0
     
-        if Int(guess) <= actual && Int(guess) > 0 {
-            
-            let accuracyLower = Double(guess) / Double(actual) * 100
-            score = Int(accuracyLower)
-        }
-        if Int(guess) > actual && Int(guess) > 0 {
-            let difference = Double(guess) - Double(actual)
-            let accuracyHigher = ((Double(actual) - difference) / Double(actual)) * 100
-            score = Int(accuracyHigher)
-        }
-        if Int(guess) > (actual * 2) {
-            score = 0
-        }
-
-        return score
+    if Int(actual) == 0 {
+        return 0
+    }
+    
+    if Int(guess) <= actual && Int(guess) > 0 {
+        
+        let accuracyLower = Double(guess) / Double(actual) * 100
+        score = Int(accuracyLower)
+    }
+    if Int(guess) > actual && Int(guess) > 0 {
+        let difference = Double(guess) - Double(actual)
+        let accuracyHigher = ((Double(actual) - difference) / Double(actual)) * 100
+        score = Int(accuracyHigher)
+    }
+    if Int(guess) > (actual * 2) {
+        score = 0
+    }
+    return score
 }

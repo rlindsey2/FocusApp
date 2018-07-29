@@ -19,12 +19,25 @@
 		9D008BAA2026A0E900165C87 /* Ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D008BA92026A0E900165C87 /* Ding.wav */; };
 		9D00ED6E2040B83900DB84C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D00ED6D2040B83900DB84C5 /* GoogleService-Info.plist */; };
 		9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0328D9206037B3000AE6BB /* SwipingController.swift */; };
+		9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1FAA8220ED79A60032A337 /* CoreData Model.swift */; };
 		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
 		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
+		9D4EBD2E20CD4F7700A021D0 /* ListOfLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */; };
 		9D54B584207039B500C359EE /* calculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54B583207039B500C359EE /* calculatorButton.swift */; };
-		9D5B3F08207D324400A5E0AC /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B3F07207D324400A5E0AC /* ProgressBar.swift */; };
+		9D5B3F08207D324400A5E0AC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B3F07207D324400A5E0AC /* ProgressView.swift */; };
+		9D5B516520EA4C880016B5D1 /* ScoreboardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B516420EA4C880016B5D1 /* ScoreboardAnimations.swift */; };
+		9D5C06C920BA0D7A0007EC05 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06C820BA0D7A0007EC05 /* CircleView.swift */; };
+		9D5C06CB20BC04FE0007EC05 /* ctaButtonShade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CA20BC04FE0007EC05 /* ctaButtonShade.swift */; };
+		9D5C06CD20BC204B0007EC05 /* NewCountdownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */; };
+		9D5C06CF20BC25B30007EC05 /* CountdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CE20BC25B30007EC05 /* CountdownSelector.swift */; };
+		9D6AA92820B400FF00C4D274 /* NewHomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6AA92720B400FF00C4D274 /* NewHomeScreenVC.swift */; };
 		9D7C8A322035C9FE0057989F /* landscapeBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */; };
 		9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E99552045E40C00C09A39 /* backgroundImages.swift */; };
+		9DB955DE20BF282700B88853 /* NewSessionInProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB955DD20BF282700B88853 /* NewSessionInProgressVC.swift */; };
+		9DB955E020BF2BC000B88853 /* NewInputScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB955DF20BF2BC000B88853 /* NewInputScoreVC.swift */; };
+		9DB955E220BF54CB00B88853 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB955E120BF54CB00B88853 /* InformationVC.swift */; };
+		9DB955E420BFD90D00B88853 /* ReceiveScoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB955E320BFD90D00B88853 /* ReceiveScoreVC.swift */; };
+		9DB955E620BFDD3200B88853 /* ScoreboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB955E520BFDD3200B88853 /* ScoreboardVC.swift */; };
 		9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */; };
 		9DC22550202CA48000D5D9AA /* SeeResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2254F202CA48000D5D9AA /* SeeResultVC.swift */; };
 		9DC22552202DD33E00D5D9AA /* LevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22551202DD33E00D5D9AA /* LevelModel.swift */; };
@@ -32,11 +45,13 @@
 		9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2255C202E180000D5D9AA /* FirstLaunch.swift */; };
 		9DC2256F202F5A7000D5D9AA /* MainVCResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */; };
 		9DC22572202F69C900D5D9AA /* RectangleActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */; };
+		9DD6AABF20D0FDE9003B2E98 /* MyAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD6AABE20D0FDE9003B2E98 /* MyAudioPlayer.swift */; };
 		9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */; };
 		9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */; };
 		9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */; };
 		9DE166CE2047208400067CEE /* InstructionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE166CD2047208400067CEE /* InstructionsVC.swift */; };
 		9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF37F6205F26590053D0EF /* PageCell.swift */; };
+		9DF98A032107A5B200A0B2DB /* CongratulationsPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF98A022107A5B200A0B2DB /* CongratulationsPopupViewController.swift */; };
 		D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,12 +70,25 @@
 		9D008BA92026A0E900165C87 /* Ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ding.wav; sourceTree = "<group>"; };
 		9D00ED6D2040B83900DB84C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D0328D9206037B3000AE6BB /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
+		9D1FAA8220ED79A60032A337 /* CoreData Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Model.swift"; sourceTree = "<group>"; };
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
+		9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLevels.swift; sourceTree = "<group>"; };
 		9D54B583207039B500C359EE /* calculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatorButton.swift; sourceTree = "<group>"; };
-		9D5B3F07207D324400A5E0AC /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		9D5B3F07207D324400A5E0AC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		9D5B516420EA4C880016B5D1 /* ScoreboardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardAnimations.swift; sourceTree = "<group>"; };
+		9D5C06C820BA0D7A0007EC05 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		9D5C06CA20BC04FE0007EC05 /* ctaButtonShade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctaButtonShade.swift; sourceTree = "<group>"; };
+		9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCountdownVC.swift; sourceTree = "<group>"; };
+		9D5C06CE20BC25B30007EC05 /* CountdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownSelector.swift; sourceTree = "<group>"; };
+		9D6AA92720B400FF00C4D274 /* NewHomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewHomeScreenVC.swift; path = FocusMe/Controller/NewHomeScreenVC.swift; sourceTree = SOURCE_ROOT; };
 		9D7C8A312035C9FE0057989F /* landscapeBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = landscapeBackground.mp3; sourceTree = "<group>"; };
 		9D8E99552045E40C00C09A39 /* backgroundImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = backgroundImages.swift; path = "FocusMe/View/Custom views/backgroundImages.swift"; sourceTree = SOURCE_ROOT; };
+		9DB955DD20BF282700B88853 /* NewSessionInProgressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionInProgressVC.swift; sourceTree = "<group>"; };
+		9DB955DF20BF2BC000B88853 /* NewInputScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInputScoreVC.swift; sourceTree = "<group>"; };
+		9DB955E120BF54CB00B88853 /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		9DB955E320BFD90D00B88853 /* ReceiveScoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveScoreVC.swift; sourceTree = "<group>"; };
+		9DB955E520BFDD3200B88853 /* ScoreboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardVC.swift; sourceTree = "<group>"; };
 		9DC2254D202BBD3200D5D9AA /* InputGuessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputGuessVC.swift; sourceTree = "<group>"; };
 		9DC2254F202CA48000D5D9AA /* SeeResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeResultVC.swift; sourceTree = "<group>"; };
 		9DC22551202DD33E00D5D9AA /* LevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModel.swift; sourceTree = "<group>"; };
@@ -68,12 +96,14 @@
 		9DC2255C202E180000D5D9AA /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 		9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCResultCell.swift; sourceTree = "<group>"; };
 		9DC22571202F69C900D5D9AA /* RectangleActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleActionButton.swift; sourceTree = "<group>"; };
+		9DD6AABE20D0FDE9003B2E98 /* MyAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAudioPlayer.swift; sourceTree = "<group>"; };
 		9DD92C9D20A1869F00E8CF4B /* FocusMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FocusMe.entitlements; sourceTree = "<group>"; };
 		9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
 		9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 		9DE166CD2047208400067CEE /* InstructionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsVC.swift; sourceTree = "<group>"; };
 		9DEF37F6205F26590053D0EF /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		9DF98A022107A5B200A0B2DB /* CongratulationsPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsPopupViewController.swift; sourceTree = "<group>"; };
 		A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.release.xcconfig"; sourceTree = "<group>"; };
 		E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +170,14 @@
 			isa = PBXGroup;
 			children = (
 				9D0328D9206037B3000AE6BB /* SwipingController.swift */,
+				9DB955E120BF54CB00B88853 /* InformationVC.swift */,
+				9D6AA92720B400FF00C4D274 /* NewHomeScreenVC.swift */,
+				9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */,
+				9DB955DD20BF282700B88853 /* NewSessionInProgressVC.swift */,
+				9DB955DF20BF2BC000B88853 /* NewInputScoreVC.swift */,
+				9DB955E320BFD90D00B88853 /* ReceiveScoreVC.swift */,
+				9DB955E520BFDD3200B88853 /* ScoreboardVC.swift */,
+				9DF98A022107A5B200A0B2DB /* CongratulationsPopupViewController.swift */,
 				9D008B9B20253C0C00165C87 /* MainVC.swift */,
 				9DE166CD2047208400067CEE /* InstructionsVC.swift */,
 				9D008B9D20253D3A00165C87 /* CountdownVC.swift */,
@@ -164,7 +202,11 @@
 				9DC2255C202E180000D5D9AA /* FirstLaunch.swift */,
 				9DC22553202DDCE100D5D9AA /* AccuracyLogic.swift */,
 				9D008BA520269BDE00165C87 /* AudioModel.swift */,
+				9DD6AABE20D0FDE9003B2E98 /* MyAudioPlayer.swift */,
 				9DC22551202DD33E00D5D9AA /* LevelModel.swift */,
+				9D1FAA8220ED79A60032A337 /* CoreData Model.swift */,
+				9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */,
+				9D5C06CE20BC25B30007EC05 /* CountdownSelector.swift */,
 				9D36FCA32061018200554D03 /* OnboardingPage.swift */,
 			);
 			path = Model;
@@ -212,7 +254,10 @@
 			children = (
 				9D008B8B2024586500165C87 /* LaunchScreen.storyboard */,
 				9D008B832024586500165C87 /* Main.storyboard */,
-				9D5B3F07207D324400A5E0AC /* ProgressBar.swift */,
+				9D5B516420EA4C880016B5D1 /* ScoreboardAnimations.swift */,
+				9D5B3F07207D324400A5E0AC /* ProgressView.swift */,
+				9D5C06C820BA0D7A0007EC05 /* CircleView.swift */,
+				9D5C06CA20BC04FE0007EC05 /* ctaButtonShade.swift */,
 				9DC2256D202F5A7000D5D9AA /* MainVCResultCell.swift */,
 				9DEF37F6205F26590053D0EF /* PageCell.swift */,
 				9DC2255B202E14A700D5D9AA /* Custom views */,
@@ -399,27 +444,42 @@
 			files = (
 				9DE166CE2047208400067CEE /* InstructionsVC.swift in Sources */,
 				9DC22552202DD33E00D5D9AA /* LevelModel.swift in Sources */,
+				9DB955DE20BF282700B88853 /* NewSessionInProgressVC.swift in Sources */,
 				9DC22572202F69C900D5D9AA /* RectangleActionButton.swift in Sources */,
 				9D008BA620269BDE00165C87 /* AudioModel.swift in Sources */,
 				9D54B584207039B500C359EE /* calculatorButton.swift in Sources */,
+				9DB955E620BFDD3200B88853 /* ScoreboardVC.swift in Sources */,
 				9DC2256F202F5A7000D5D9AA /* MainVCResultCell.swift in Sources */,
+				9DB955E420BFD90D00B88853 /* ReceiveScoreVC.swift in Sources */,
+				9D5C06CF20BC25B30007EC05 /* CountdownSelector.swift in Sources */,
+				9D5B516520EA4C880016B5D1 /* ScoreboardAnimations.swift in Sources */,
 				9D008B882024586500165C87 /* FocusMe.xcdatamodeld in Sources */,
 				9D008B9E20253D3A00165C87 /* CountdownVC.swift in Sources */,
 				9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */,
+				9DB955E220BF54CB00B88853 /* InformationVC.swift in Sources */,
 				9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */,
+				9D4EBD2E20CD4F7700A021D0 /* ListOfLevels.swift in Sources */,
 				9DC22554202DDCE100D5D9AA /* AccuracyLogic.swift in Sources */,
 				9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */,
-				9D5B3F08207D324400A5E0AC /* ProgressBar.swift in Sources */,
+				9DF98A032107A5B200A0B2DB /* CongratulationsPopupViewController.swift in Sources */,
+				9D5B3F08207D324400A5E0AC /* ProgressView.swift in Sources */,
 				9D008B802024586500165C87 /* AppDelegate.swift in Sources */,
 				9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */,
 				9DC2254E202BBD3200D5D9AA /* InputGuessVC.swift in Sources */,
 				9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */,
 				9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */,
+				9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */,
 				9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */,
+				9DD6AABF20D0FDE9003B2E98 /* MyAudioPlayer.swift in Sources */,
 				9D008B9C20253C0C00165C87 /* MainVC.swift in Sources */,
+				9D5C06CB20BC04FE0007EC05 /* ctaButtonShade.swift in Sources */,
+				9D5C06CD20BC204B0007EC05 /* NewCountdownVC.swift in Sources */,
 				9D008BA4202542C100165C87 /* SessionStartedVC.swift in Sources */,
+				9D5C06C920BA0D7A0007EC05 /* CircleView.swift in Sources */,
 				9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */,
+				9DB955E020BF2BC000B88853 /* NewInputScoreVC.swift in Sources */,
 				9DC22550202CA48000D5D9AA /* SeeResultVC.swift in Sources */,
+				9D6AA92820B400FF00C4D274 /* NewHomeScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
