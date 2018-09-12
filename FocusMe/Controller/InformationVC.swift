@@ -10,18 +10,26 @@ import UIKit
 import HealthKit
 import SafariServices
 
+protocol InformationVCDelegate: NSObjectProtocol {
+    func informationModalDismissed()
+}
+
 class InformationVC: UIViewController, SFSafariViewControllerDelegate {
 
+    weak var delegate: InformationVCDelegate?
+    
     var fromScoreboard = false
     private let urlString = "https://ryan1306.typeform.com/to/QPkQeo"
     lazy var healthStore = HKHealthStore()
     
     @IBOutlet weak var appleHealthOutlet: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
+    
     
     private func setupView() {
         setCustomLightBackgroundImage()

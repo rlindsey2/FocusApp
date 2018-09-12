@@ -42,10 +42,12 @@ class PageCell: UICollectionViewCell {
         return textView
     }()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupLayoutView()
     }
+    
     
     private func setupLayoutView() {
         
@@ -63,6 +65,7 @@ class PageCell: UICollectionViewCell {
         descriptionTextView.backgroundColor = .clear
         NSLayoutConstraint(item: descriptionTextView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 0.33, constant: 0.0).isActive = true
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -9,22 +9,7 @@
 import UIKit
 import CoreData
 
-class NewLevel {
-    
-/*
-     TODO: Work out how to load scoreboard depending on if they have just completed a new level or not and should go through the congrats page. Potential solution:
-     
-If newLevel is false, go through core data setup as normal.
-Else if newLevel is true,
-     1. load the icons like the last session.
-     2. When progressBar animation has completed, call popup to let them know they have unlocked the next level.
-     3. Then go through the core data setup.
- 
-*/
-}
-
-
-class ScoreboardVC: UIViewController, CongratulationsDelegate {
+class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDelegate {
     
     @IBOutlet weak var mainLevelImage: UIImageView!
     @IBOutlet weak var accuracy: UILabel!
@@ -36,10 +21,14 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
     @IBOutlet weak var levelLabel3: UILabel!
     @IBOutlet weak var progressBar: ProgressBar!
     @IBOutlet weak var backgroundBar: UILabel!
+    @IBOutlet weak var sessionText: UILabel!
+    
+    var level = 0
     
     var newLevelUnlocked = false
+    var fromHomeScreen = false
     
-    lazy var countingPercentage = CountingLabel(startValue: 0.0, endValue: percentageEndValue(), animationDuration: 2)
+    lazy var countingPercentage = CountingLabel(startValue: 0.0, endValue: percentageEndValue(), animationDuration: 2, percentage: true)
     
     let lockImage = UIImage(named: "icon_lock")
     let lockLabel = "locked"
@@ -51,6 +40,15 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
     func modalDismissed() {
         newLevelUnlocked = false
         fetchCoreData()
+        countingPercentage.text = "0%"
+        progressBar.frame.size.width = 0
+    }
+    
+    
+    func informationModalDismissed() {
+        
+        fromHomeScreen = false
+        print("called it \(fromHomeScreen)")
     }
     
     
@@ -60,8 +58,12 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
         fetchCoreData()
         view.addSubview(countingPercentage)
         countingPercentage.frame = view.frame
+        countingPercentage.font = UIFont(name: "Avenir-Heavy", size: 16)
+        countingPercentage.addCharacterSpacing(kernValue: 2)
+        
         setupConstraints()
     }
+    
     
     private func setupConstraints() {
         countingPercentage.translatesAutoresizingMaskIntoConstraints = false
@@ -73,22 +75,28 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        print("home screen variable is \(fromHomeScreen)")
         progressBarAnimation()
 //        levelImage2.animation(height: 200)
-        
     }
+    
     
     private func progressBarAnimation() {
         
         let percentage = percentageEndValue()
-        progressBar.animation(width: Int(Double(backgroundBar.frame.width) * percentage), superViewWidth: Int(backgroundBar.frame.size.width)) {
+        progressBar.animation(width: Int(Double(backgroundBar.frame.width) * percentage), unlocked: newLevelUnlocked) {
             self.performSegue(withIdentifier: "CongratulationsSegue", sender: nil)
         }
     }
     
     
     private func percentageEndValue() -> Double {
-        let countOfSessions = CoreDataModel.sharedInstance.countLevels() - 1 < ListOfLevels.sharedInstance.allLevels.count ? (CoreDataModel.sharedInstance.countLevels() - 1) : ListOfLevels.sharedInstance.allLevels.count - 1
+        var countOfSessions = CoreDataModel.sharedInstance.countLevels() - 1 < ListOfLevels.sharedInstance.allLevels.count ? (CoreDataModel.sharedInstance.countLevels() - 1) : ListOfLevels.sharedInstance.allLevels.count - 1
+
+            if fromHomeScreen == true && (countOfSessions == 1 || countOfSessions == 3) {
+                countOfSessions = 0
+            }
+        
         return ListOfLevels.sharedInstance.allLevels[countOfSessions].percentageComplete
     }
     
@@ -97,6 +105,7 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
         setCustomLightBackgroundImage()
         backgroundBar.layer.cornerRadius = 8
     }
+    
     
     private func fetchCoreData() {
         
@@ -114,9 +123,8 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
     
     private func coreDataSetup(result: [Any]) {
         
-        var level = result.count
-        
-        //sessionCount.text = "0" + String(result.count - 1)
+        level = result.count
+
         sessionCount.text = "0" + String(level - 1)
         let sumOfBellCountGuess = result.reduce(0) { $0 + (($1 as AnyObject).value(forKey: "bellCountGuess") as? Int16 ?? 0) }
         let sumOfBellCountActual = result.reduce(0) { $0 + (($1 as AnyObject).value(forKey: "bellCountActual") as? Int16 ?? 0) }
@@ -135,30 +143,21 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
         accuracy.text = String(AccuracyLogic(guess: Int(sumOfBellCountGuess), actual: Int(sumOfBellCountActual))) + "%"
         
         if newLevelUnlocked == true && level > 1 {
-            //minus the level by 1
             level -= 1
         }
-        print("level number is \(level)")
         
-        //if result.count >= 2 {
         if level >= 2 {
-            
             levelImage2.image = UIImage(named: "icon_helm")
             levelLabel2.text = "helm"
         }
         
-        //if result.count >= 4 {
         if level >= 4 {
-            
             levelImage3.image = UIImage(named: "icon_submarine")
             levelLabel3.text = "submarine"
         }
         
-        //if result.count >= 2 && result.count < 4 {
         if level >= 2 && level < 4 {
-            
             mainLevelImage.image = UIImage(named: "icon_helm")
-        //} else if result.count >= 4 {
         } else if level >= 4 {
             mainLevelImage.image = UIImage(named: "icon_submarine")
         }
@@ -174,8 +173,9 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate {
         if let destinationViewController = segue.destination as? InformationVC {
             destinationViewController.fromScoreboard = true
         }
-        if let destinationViewController = segue.destination as? CongratulationsPopupViewController {
+        if let destinationViewController = segue.destination as? CongratulationsPopupVC {
             destinationViewController.delegate = self
+            destinationViewController.level = level
         }
     }
 }

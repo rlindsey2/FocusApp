@@ -6,7 +6,6 @@
 //  Copyright © 2018 Focus me. All rights reserved.
 //
 
-
 import UIKit
 
 class ProgressView: UIView, CAAnimationDelegate {
@@ -72,7 +71,7 @@ class ProgressView: UIView, CAAnimationDelegate {
         let endAngle = CGFloat(3 * Double.pi / 2)
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
         let gradientMaskLayer = gradientMaskBg()
-        bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/1.5 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
+        bgProgressLayer.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/1.5 - 33.0, startAngle:startAngle, endAngle:endAngle, clockwise: true).cgPath
         bgProgressLayer.backgroundColor = UIColor.clear.cgColor
         bgProgressLayer.fillColor = nil
         bgProgressLayer.strokeColor = UIColor.black.cgColor
@@ -143,6 +142,7 @@ class ProgressView: UIView, CAAnimationDelegate {
         let timeSincePause = fgProgressLayer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         fgProgressLayer.beginTime = timeSincePause
     }
+    
     
     func resetAnimation() {
         fgProgressLayer.speed = 1.0

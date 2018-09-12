@@ -13,7 +13,6 @@ class CTAButtonShade: UIView {
     
     var path: UIBezierPath!
     
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clear
@@ -27,8 +26,7 @@ class CTAButtonShade: UIView {
         let centerPoint = CGPoint(x: frame.width/2 , y: frame.height/2)
         self.path = UIBezierPath(arcCenter:centerPoint, radius: frame.width/1.7 - 30.0, startAngle:startAngle, endAngle:endAngle, clockwise: true)
         
-        
-        path.lineWidth = 40
+        path.lineWidth = 30
         UIColor(white: 1, alpha: 0.1).setStroke()
         UIColor.clear.setFill()
         path.fill()

@@ -11,15 +11,16 @@ import UIKit
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let pages = [
-        OnboardingPage(headerText1: "Focus your mind" , headerText2: "\nConquer the world", imageName: "shield"),
-        OnboardingPage(headerText1: "Dynamic meditations", headerText2: "\nCount the chimes", imageName: "meditate"),
+        OnboardingPage(headerText1: "Prime your mind" , headerText2: "\nConquer the world", imageName: "shield"),
+        OnboardingPage(headerText1: "Dynamic meditations", headerText2: "\nCount the beacons", imageName: "meditate"),
         OnboardingPage(headerText1: "For best results", headerText2: "\nUse headphones", imageName: "headphones")
     ]
+    
     
     private let nextButton: RectangleActionButton = {
         let button = RectangleActionButton(type: .system)
         button.whiteBorder()
-        
+
         button.setTitle("Done", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
@@ -27,11 +28,12 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return button
     }()
     
+    
     @objc private func handleNext() {
         if pageControl.currentPage == (pages.count - 1) {
             
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainVC")
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreenVC")
             self.present(nextViewController, animated:true, completion:nil)
         } else {
             
@@ -42,6 +44,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         }
     }
     
+    
     private lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.currentPage = 0
@@ -50,6 +53,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         pc.pageIndicatorTintColor = .white
         return pc
     }()
+    
     
     fileprivate func setupBottomControls() {
     
@@ -66,10 +70,12 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         NSLayoutConstraint(item: pageControl, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.45, constant: 0.0).isActive = true
     }
     
+    
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let x = targetContentOffset.pointee.x
         pageControl.currentPage = Int(x / view.frame.width)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,13 +91,16 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.isPagingEnabled = true
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pages.count
     }
+    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! PageCell
@@ -100,6 +109,7 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)

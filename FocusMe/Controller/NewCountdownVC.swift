@@ -33,12 +33,13 @@ class NewCountdownVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         
+        setupView()
         for _ in 1...numberOfSelectors {
             pickCountdown()
         }
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(countdownTime), target: self, selector: #selector(changeDetails), userInfo: nil, repeats: true)
+        text.addCharacterSpacing(kernValue: 2)
     }
     
 
@@ -59,6 +60,7 @@ class NewCountdownVC: UIViewController {
             timer.invalidate()
             performSegue(withIdentifier: "NewCountdownToSession", sender: nil)
         }
+        text.addCharacterSpacing(kernValue: 2)
     }
     
     
@@ -75,9 +77,10 @@ class NewCountdownVC: UIViewController {
         text.text = screensToShow[indexNumber].text
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NewCountdownToSession" {
-            if let destinationViewController = segue.destination as? NewSessionInProgressVC {
+            if let destinationViewController = segue.destination as? SessionInProgressVC {
                 destinationViewController.level = level
                 destinationViewController.session = ListOfLevels.sharedInstance.allLevels[level]
                 

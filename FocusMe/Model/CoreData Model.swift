@@ -27,50 +27,6 @@ class CoreDataModel {
         } catch {
             print(error)
         }
-        print("thy score is \(count)")
         return count
     }
-//
-//    func lastLevel() -> String {
-//
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedSessionV2")
-//
-//        var listOfCompletedLevels: [String] = []
-//        request.returnsObjectsAsFaults = false
-//        do {
-//            let result = try context.fetch(request)
-//
-//            for data in result as! [NSManagedObject] {
-//
-//                listOfCompletedLevels.append(data.value(forKey: "level") as! String)
-//            }
-//
-//        } catch {
-//            print("Failed")
-//        }
-//
-//        guard let unwrappedLevel = listOfCompletedLevels.last else { return "none" }
-//
-//        return unwrappedLevel
-//    }
-    
-//    func countOfLevels(name:String) -> Int {
-//
-//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedSessionV2")
-//
-//            var count = 0
-//            request.returnsObjectsAsFaults = false
-//            do {
-//                let result = try context.fetch(request)
-//
-//                for data in result as! [NSManagedObject] {
-//                    let sessionName = name
-//                    count += (data.value(forKey: "level") as! String) == sessionName ? 1 : 0
-//                }
-//
-//            } catch {
-//                print("Failed")
-//            }
-//        return count
-//    }
 }

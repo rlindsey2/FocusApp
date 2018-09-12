@@ -6,7 +6,6 @@
 //  Copyright © 2018 Focus me. All rights reserved.
 //
 
-
 import AVFoundation
 
 class MyAudioPlayer {
@@ -22,6 +21,7 @@ class MyAudioPlayer {
     private let dingResource: String
     private let randomUpperNumberDifficulty: UInt32
     private let randomLowerNumberDifficulty: UInt32
+    private let duration: Int
     
     var seconds = Int()
     var countdownTimer = Timer()
@@ -33,12 +33,13 @@ class MyAudioPlayer {
     private var totalPauseTimePeriod = 0.0
     
     
-    init(randomUpperNumberDifficulty: UInt32, randomLowerNumberDifficulty: UInt32, backgroundResource: String, dingResource: String) {
+    init(randomUpperNumberDifficulty: UInt32, randomLowerNumberDifficulty: UInt32, backgroundResource: String, dingResource: String, duration: Int) {
         
         self.randomLowerNumberDifficulty = randomLowerNumberDifficulty
         self.randomUpperNumberDifficulty = randomUpperNumberDifficulty
         self.backgroundResource = backgroundResource
         self.dingResource = dingResource
+        self.duration = duration
         
         let backgroundSoundURL = Bundle.main.url(forResource: backgroundResource, withExtension: "mp3")!
         let bellSoundURL = Bundle.main.url(forResource: dingResource, withExtension: "wav")!
@@ -56,13 +57,13 @@ class MyAudioPlayer {
             } catch {
                 print(error)
             }
-            
         }
         catch {
             print(error)
         }
         
-        backgroundSoundPlayer.currentTime = 790
+        backgroundSoundPlayer.currentTime = backgroundSoundPlayer.duration - TimeInterval(duration)
+        backgroundSoundPlayer.volume = 0
         //set countdown timer as duration of music minus the current time of the audio.
         seconds = Int(backgroundSoundPlayer.duration - backgroundSoundPlayer.currentTime)
     }
@@ -100,8 +101,8 @@ class MyAudioPlayer {
         
             //if new timer equals 0 play as normal. Else it's previously played and has been paused so set new time period to play.
             if newTimerDuration == 0 {
-                
                 backgroundSoundPlayer.play()
+                backgroundSoundPlayer.setVolume(1, fadeDuration: 20)
                 print("playing")
                 playingState = true
                 timerStartTime = Date()
@@ -116,6 +117,7 @@ class MyAudioPlayer {
                 timerStartTime = Date()
                 newTimerDuration = 0
             }
+        
         }
     
     func pause() {

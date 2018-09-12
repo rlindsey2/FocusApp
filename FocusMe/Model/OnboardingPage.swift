@@ -7,7 +7,6 @@
 //
 
 struct OnboardingPage {
-    
     let headerText1: String
     let headerText2: String
     let imageName: String

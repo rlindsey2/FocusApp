@@ -16,14 +16,15 @@ class ProgressBar: UIView {
     }
     
 
-    func animation(width: Int, superViewWidth: Int, completion: (() -> Swift.Void)? = nil) {
+    func animation(width: Int, unlocked: Bool, completion: (() -> Swift.Void)? = nil) {
         UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {
             
             self.frame.size.width = CGFloat(width)
             
         }, completion: { (finished) in
-            if width == superViewWidth {
-                completion?()
+            print(unlocked)
+            if unlocked == true {
+                    completion?()
             }
         })
     }
@@ -54,52 +55,3 @@ class fadeInImage: UIImageView {
 
 
 
-class CountingLabel: UILabel {
-
-    let startValue: Double
-    let endValue: Double
-    let animationDuration: Double
-    let animationStartDate = Date()
-    private var displayLink: CADisplayLink?
-    
-    
-    init(startValue: Double, endValue: Double, animationDuration: Double){
-        self.startValue = startValue
-        self.endValue = endValue
-        self.animationDuration = animationDuration
-        super.init(frame: .zero)
-        self.text = "\(startValue)"
-        
-        self.textColor = UIColor.white
-
-        displayLink = CADisplayLink(target: self, selector: #selector(handleUpdate))
-        displayLink?.add(to: .main, forMode: .defaultRunLoopMode)
-    }
-
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    
-    @objc func handleUpdate() {
-
-        let now = Date()
-        let elapsedTime = now.timeIntervalSince(animationStartDate)
-
-        if elapsedTime > animationDuration {
-            stopDisplayLink()
-            self.text = "\(Int(endValue * 100))%"
-        } else {
-            let percentage = elapsedTime / animationDuration
-            let value = startValue + percentage * (endValue - startValue)
-            self.text =  "\(Int(value * 100))%"
-        }
-    }
-
-
-    private func stopDisplayLink() {
-        displayLink?.invalidate()
-        displayLink = nil
-    }
-}

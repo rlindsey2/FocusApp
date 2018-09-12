@@ -13,7 +13,7 @@ struct Level {
     let percentageComplete: Double
     let name: String
     let subHeader: String
-    let duration: String
+    let duration: Int
     let image: String
     let backgroundSound: String
     let binauralBeatSound: String
