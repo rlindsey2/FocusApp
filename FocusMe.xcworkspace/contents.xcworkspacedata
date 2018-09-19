@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FocusMe.xcodeproj">
+      location = "group:/Users/ryanlindsey/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Swift/FocusMe/FocusMe/Assets/Audio files/Training_session.mp3">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/ryanlindsey/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Swift/FocusMe/primr.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -50,7 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D008B7C2024586500165C87 /* FocusMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D008B7C2024586500165C87 /* primr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D008B7F2024586500165C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D008B842024586500165C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D008B872024586500165C87 /* FocusMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FocusMe.xcdatamodel; sourceTree = "<group>"; };
@@ -65,6 +65,7 @@
 		9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Underwater_beacon.wav; sourceTree = "<group>"; };
 		9D1FAA8220ED79A60032A337 /* CoreData Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Model.swift"; sourceTree = "<group>"; };
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
+		9D3CD38121527D4C00865FE5 /* Training_session.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Training_session.mp3; path = "/Users/ryanlindsey/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Swift/FocusMe/FocusMe/Assets/Audio files/Training_session.mp3"; sourceTree = "<absolute>"; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
 		9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLevels.swift; sourceTree = "<group>"; };
 		9D5B3F07207D324400A5E0AC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -132,7 +133,7 @@
 		9D008B7D2024586500165C87 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D008B7C2024586500165C87 /* FocusMe.app */,
+				9D008B7C2024586500165C87 /* primr.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +218,7 @@
 		9DC2255E202E494400D5D9AA /* Audio files */ = {
 			isa = PBXGroup;
 			children = (
+				9D3CD38121527D4C00865FE5 /* Training_session.mp3 */,
 				9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */,
 				9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */,
 			);
@@ -268,9 +270,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9D008B7B2024586500165C87 /* FocusMe */ = {
+		9D008B7B2024586500165C87 /* primr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D008B912024586500165C87 /* Build configuration list for PBXNativeTarget "FocusMe" */;
+			buildConfigurationList = 9D008B912024586500165C87 /* Build configuration list for PBXNativeTarget "primr" */;
 			buildPhases = (
 				F55835CF10ADEC2F9C3251B6 /* [CP] Check Pods Manifest.lock */,
 				9D008B782024586500165C87 /* Sources */,
@@ -284,9 +286,9 @@
 			);
 			dependencies = (
 			);
-			name = FocusMe;
+			name = primr;
 			productName = FocusMe;
-			productReference = 9D008B7C2024586500165C87 /* FocusMe.app */;
+			productReference = 9D008B7C2024586500165C87 /* primr.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -300,7 +302,7 @@
 				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Focus me";
+				ORGANIZATIONNAME = primr;
 				TargetAttributes = {
 					9D008B7B2024586500165C87 = {
 						CreatedOnToolsVersion = 9.2;
@@ -316,7 +318,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9D008B772024586500165C87 /* Build configuration list for PBXProject "FocusMe" */;
+			buildConfigurationList = 9D008B772024586500165C87 /* Build configuration list for PBXProject "primr" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -329,7 +331,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9D008B7B2024586500165C87 /* FocusMe */,
+				9D008B7B2024586500165C87 /* primr */,
 			);
 		};
 /* End PBXProject section */
@@ -630,7 +632,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9D008B772024586500165C87 /* Build configuration list for PBXProject "FocusMe" */ = {
+		9D008B772024586500165C87 /* Build configuration list for PBXProject "primr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D008B8F2024586500165C87 /* Debug */,
@@ -639,7 +641,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9D008B912024586500165C87 /* Build configuration list for PBXNativeTarget "FocusMe" */ = {
+		9D008B912024586500165C87 /* Build configuration list for PBXNativeTarget "primr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9D008B922024586500165C87 /* Debug */,

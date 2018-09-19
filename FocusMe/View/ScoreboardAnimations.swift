@@ -14,7 +14,7 @@ class ProgressBar: UIView {
         super.init(coder: aDecoder)!
          layer.cornerRadius = 8
     }
-    
+
 
     func animation(width: Int, unlocked: Bool, completion: (() -> Swift.Void)? = nil) {
         UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {
