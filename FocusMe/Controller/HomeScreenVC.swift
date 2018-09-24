@@ -40,7 +40,7 @@ class HomeScreenVC: UIViewController {
     
     private func durationToTime(duration: Int) -> String {
         if level == 0 {
-            return "\(duration) seconds"
+            return /*"\(duration) seconds"*/ ""
         } else {
             return "\(duration / 60) mins"
         }
@@ -111,7 +111,7 @@ class HomeScreenVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MainToCountdown" {
-            if let destinationViewController = segue.destination as? NewCountdownVC {
+            if let destinationViewController = segue.destination as? CountdownVC {
                 destinationViewController.level = level
             }
         }

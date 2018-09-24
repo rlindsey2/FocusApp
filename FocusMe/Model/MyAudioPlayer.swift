@@ -16,9 +16,10 @@ class MyAudioPlayer {
     var timer = Timer()
     var bellCount = 0
     var playingState = true
+    var trainingSession = true
     
     private let backgroundResource: String
-    private let dingResource: String
+    private let dingResource: String?
     private let randomUpperNumberDifficulty: UInt32
     private let randomLowerNumberDifficulty: UInt32
     private let duration: Int
@@ -33,7 +34,7 @@ class MyAudioPlayer {
     private var totalPauseTimePeriod = 0.0
     
     
-    init(randomUpperNumberDifficulty: UInt32, randomLowerNumberDifficulty: UInt32, backgroundResource: String, dingResource: String, duration: Int) {
+    init(randomUpperNumberDifficulty: UInt32, randomLowerNumberDifficulty: UInt32, backgroundResource: String, dingResource: String?, duration: Int) {
         
         self.randomLowerNumberDifficulty = randomLowerNumberDifficulty
         self.randomUpperNumberDifficulty = randomUpperNumberDifficulty
@@ -41,15 +42,21 @@ class MyAudioPlayer {
         self.dingResource = dingResource
         self.duration = duration
         
+        
         let backgroundSoundURL = Bundle.main.url(forResource: backgroundResource, withExtension: "mp3")!
-        let bellSoundURL = Bundle.main.url(forResource: dingResource, withExtension: "wav")!
+        let bellSoundURL = Bundle.main.url(forResource: dingResource, withExtension: "wav") ?? nil
+        
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
             try AVAudioSession.sharedInstance().setActive(true)
             backgroundSoundPlayer = try AVAudioPlayer(contentsOf: backgroundSoundURL)
-            bellSoundPlayer = try AVAudioPlayer(contentsOf: bellSoundURL)
-            bellSoundPlayer.volume = 0.8
             
+            if bellSoundURL != nil {
+                bellSoundPlayer = try AVAudioPlayer(contentsOf: bellSoundURL!)
+                bellSoundPlayer.volume = 0.8
+                trainingSession = false
+            }
+
             do {
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
                 try AVAudioSession.sharedInstance().setActive(true)
@@ -103,37 +110,45 @@ class MyAudioPlayer {
             if newTimerDuration == 0 {
                 backgroundSoundPlayer.play()
                 backgroundSoundPlayer.setVolume(1, fadeDuration: 20)
-                print("playing")
                 playingState = true
+                if trainingSession == false {
                 timerStartTime = Date()
-                randomBellTimer()
+                
+                
+                    randomBellTimer()
+                }
             } else {
                 backgroundSoundPlayer.play()
                 //create new timer with the time left.
-                self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(newTimerDuration), target: self, selector: #selector(playBellSound), userInfo: nil, repeats: false)
                 
+                if trainingSession == false {
+                    self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(newTimerDuration), target: self, selector: #selector(playBellSound), userInfo: nil, repeats: false)
+                    timerStartTime = Date()
+                }
+
                 playingState = true
-                
-                timerStartTime = Date()
                 newTimerDuration = 0
             }
-        
         }
     
     func pause() {
         
             backgroundSoundPlayer.pause()
-            timer.invalidate()
-            //time difference between timer started and pause button
-            let timeInterval = Date().timeIntervalSince(timerStartTime!)
-            totalPauseTimePeriod = totalPauseTimePeriod + timeInterval
+        
+            if trainingSession == false {
+                timer.invalidate()
+                //time difference between timer started and pause button
+                let timeInterval = Date().timeIntervalSince(timerStartTime!)
+                totalPauseTimePeriod = totalPauseTimePeriod + timeInterval
+                
+                
+                print(totalPauseTimePeriod)
+                newTimerDuration = Double(randomNumberInReset!) - totalPauseTimePeriod
+                print("set new timer for: " + String(newTimerDuration))
+                
+                countdownTimer.invalidate()
+            }
             playingState = false
-            
-            print(totalPauseTimePeriod)
-            newTimerDuration = Double(randomNumberInReset!) - totalPauseTimePeriod
-            print("set new timer for: " + String(newTimerDuration))
-            
-            countdownTimer.invalidate()
         }
 
     

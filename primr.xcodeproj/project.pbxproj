@@ -19,6 +19,7 @@
 		9D1E3E202148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */; };
 		9D1E3E222148FBF60096D688 /* Underwater_beacon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */; };
 		9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1FAA8220ED79A60032A337 /* CoreData Model.swift */; };
+		9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D2775272152BA6A00BA668F /* Training_session.mp3 */; };
 		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
 		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
 		9D4EBD2E20CD4F7700A021D0 /* ListOfLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */; };
@@ -26,7 +27,7 @@
 		9D5B516520EA4C880016B5D1 /* ScoreboardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B516420EA4C880016B5D1 /* ScoreboardAnimations.swift */; };
 		9D5C06C920BA0D7A0007EC05 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06C820BA0D7A0007EC05 /* CircleView.swift */; };
 		9D5C06CB20BC04FE0007EC05 /* ctaButtonShade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CA20BC04FE0007EC05 /* ctaButtonShade.swift */; };
-		9D5C06CD20BC204B0007EC05 /* NewCountdownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */; };
+		9D5C06CD20BC204B0007EC05 /* CountdownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CC20BC204B0007EC05 /* CountdownVC.swift */; };
 		9D5C06CF20BC25B30007EC05 /* CountdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5C06CE20BC25B30007EC05 /* CountdownSelector.swift */; };
 		9D63039421197D7F00E3DB59 /* CountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D63039321197D7F00E3DB59 /* CountingLabel.swift */; };
 		9D6AA92820B400FF00C4D274 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6AA92720B400FF00C4D274 /* HomeScreenVC.swift */; };
@@ -64,15 +65,15 @@
 		9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Underwater_main_audio_Big_Blue.mp3; sourceTree = "<group>"; };
 		9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Underwater_beacon.wav; sourceTree = "<group>"; };
 		9D1FAA8220ED79A60032A337 /* CoreData Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Model.swift"; sourceTree = "<group>"; };
+		9D2775272152BA6A00BA668F /* Training_session.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Training_session.mp3; sourceTree = "<group>"; };
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
-		9D3CD38121527D4C00865FE5 /* Training_session.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Training_session.mp3; path = "/Users/ryanlindsey/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Swift/FocusMe/FocusMe/Assets/Audio files/Training_session.mp3"; sourceTree = "<absolute>"; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
 		9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLevels.swift; sourceTree = "<group>"; };
 		9D5B3F07207D324400A5E0AC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		9D5B516420EA4C880016B5D1 /* ScoreboardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardAnimations.swift; sourceTree = "<group>"; };
 		9D5C06C820BA0D7A0007EC05 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		9D5C06CA20BC04FE0007EC05 /* ctaButtonShade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ctaButtonShade.swift; sourceTree = "<group>"; };
-		9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCountdownVC.swift; sourceTree = "<group>"; };
+		9D5C06CC20BC204B0007EC05 /* CountdownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownVC.swift; sourceTree = "<group>"; };
 		9D5C06CE20BC25B30007EC05 /* CountdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownSelector.swift; sourceTree = "<group>"; };
 		9D63039321197D7F00E3DB59 /* CountingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingLabel.swift; sourceTree = "<group>"; };
 		9D6AA92720B400FF00C4D274 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeScreenVC.swift; path = FocusMe/Controller/HomeScreenVC.swift; sourceTree = SOURCE_ROOT; };
@@ -161,7 +162,7 @@
 				9D0328D9206037B3000AE6BB /* SwipingController.swift */,
 				9DB955E120BF54CB00B88853 /* InformationVC.swift */,
 				9D6AA92720B400FF00C4D274 /* HomeScreenVC.swift */,
-				9D5C06CC20BC204B0007EC05 /* NewCountdownVC.swift */,
+				9D5C06CC20BC204B0007EC05 /* CountdownVC.swift */,
 				9DB955DD20BF282700B88853 /* SessionInProgressVC.swift */,
 				9DB955DF20BF2BC000B88853 /* InputScoreVC.swift */,
 				9DB955E320BFD90D00B88853 /* ReceiveScoreVC.swift */,
@@ -218,7 +219,7 @@
 		9DC2255E202E494400D5D9AA /* Audio files */ = {
 			isa = PBXGroup;
 			children = (
-				9D3CD38121527D4C00865FE5 /* Training_session.mp3 */,
+				9D2775272152BA6A00BA668F /* Training_session.mp3 */,
 				9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */,
 				9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */,
 			);
@@ -345,6 +346,7 @@
 				9D1E3E202148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 in Resources */,
 				9D008B8D2024586500165C87 /* LaunchScreen.storyboard in Resources */,
 				9D008B8A2024586500165C87 /* Assets.xcassets in Resources */,
+				9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */,
 				9D008B852024586500165C87 /* Main.storyboard in Resources */,
 				9D1E3E222148FBF60096D688 /* Underwater_beacon.wav in Resources */,
 			);
@@ -453,7 +455,7 @@
 				9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */,
 				9DD6AABF20D0FDE9003B2E98 /* MyAudioPlayer.swift in Sources */,
 				9D5C06CB20BC04FE0007EC05 /* ctaButtonShade.swift in Sources */,
-				9D5C06CD20BC204B0007EC05 /* NewCountdownVC.swift in Sources */,
+				9D5C06CD20BC204B0007EC05 /* CountdownVC.swift in Sources */,
 				9D5C06C920BA0D7A0007EC05 /* CircleView.swift in Sources */,
 				9DC2255D202E180000D5D9AA /* FirstLaunch.swift in Sources */,
 				9DB955E020BF2BC000B88853 /* InputScoreVC.swift in Sources */,

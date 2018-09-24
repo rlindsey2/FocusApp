@@ -19,7 +19,7 @@ class InformationVC: UIViewController, SFSafariViewControllerDelegate {
     weak var delegate: InformationVCDelegate?
     
     var fromScoreboard = false
-    private let urlString = "https://ryan1306.typeform.com/to/QPkQeo"
+    
     lazy var healthStore = HKHealthStore()
     
     @IBOutlet weak var appleHealthOutlet: UIButton!
@@ -73,6 +73,7 @@ class InformationVC: UIViewController, SFSafariViewControllerDelegate {
     
     
     @IBAction func giveFeeddback(_ sender: UIButton) {
+        let urlString = "https://ryan1306.typeform.com/to/QPkQeo"
         if let url = URL(string: urlString) {
             let vc = SFSafariViewController(url: url)
             vc.delegate = self
@@ -90,9 +91,11 @@ class InformationVC: UIViewController, SFSafariViewControllerDelegate {
     @IBAction func closeVC(_ sender: UIButton) {
         
         if fromScoreboard {
+            delegate?.informationModalDismissed()
             dismiss(animated: true, completion: nil)
         } else {
             performSegue(withIdentifier: "unwindToMainFromInformation", sender: self)
         }
     }
+    
 }

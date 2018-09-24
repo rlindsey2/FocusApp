@@ -16,7 +16,7 @@ class CoreDataModel {
     lazy var context = appDelegate.persistentContainer.viewContext
     
     
-    func countLevels() -> Int {
+    func countOfCompletedLevels() -> Int {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedSessionV2")
 
         request.returnsObjectsAsFaults = false

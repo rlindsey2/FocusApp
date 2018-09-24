@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 
+
 class SessionInProgressVC: UIViewController {
 
     @IBOutlet weak var progressView: ProgressView!
@@ -19,7 +20,9 @@ class SessionInProgressVC: UIViewController {
     var level = 0
     var session = ListOfLevels.sharedInstance.allLevels[0]
     private var timer = Timer()
-    lazy var audio = MyAudioPlayer(randomUpperNumberDifficulty: session.randomUpperNumberDifficulty, randomLowerNumberDifficulty: session.randomLowerNumberDifficulty, backgroundResource: session.backgroundSound, dingResource: session.dingSound, duration: session.duration)
+    
+    lazy var audio = MyAudioPlayer(randomUpperNumberDifficulty: self.session.randomUpperNumberDifficulty, randomLowerNumberDifficulty: self.session.randomLowerNumberDifficulty, backgroundResource: self.session.backgroundSound, dingResource: self.session.dingSound, duration: self.session.duration)
+    
     
     lazy var audioDuration = audio.backgroundSoundPlayer.duration
     

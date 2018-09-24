@@ -47,7 +47,7 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     
     func informationModalDismissed() {
         
-        fromHomeScreen = false
+        fromHomeScreen = true
         print("called it \(fromHomeScreen)")
     }
     
@@ -91,7 +91,7 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     
     
     private func percentageEndValue() -> Double {
-        var countOfSessions = CoreDataModel.sharedInstance.countLevels() - 1 < ListOfLevels.sharedInstance.allLevels.count ? (CoreDataModel.sharedInstance.countLevels() - 1) : ListOfLevels.sharedInstance.allLevels.count - 1
+        var countOfSessions = CoreDataModel.sharedInstance.countOfCompletedLevels() - 1 < ListOfLevels.sharedInstance.allLevels.count ? (CoreDataModel.sharedInstance.countOfCompletedLevels() - 1) : ListOfLevels.sharedInstance.allLevels.count - 1
 
             if fromHomeScreen == true && (countOfSessions == 1 || countOfSessions == 3) {
                 countOfSessions = 0
@@ -171,6 +171,7 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? InformationVC {
+            destinationViewController.delegate = self
             destinationViewController.fromScoreboard = true
         }
         if let destinationViewController = segue.destination as? CongratulationsPopupVC {

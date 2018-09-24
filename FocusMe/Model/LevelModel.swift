@@ -16,8 +16,7 @@ struct Level {
     let duration: Int
     let image: String
     let backgroundSound: String
-    let binauralBeatSound: String
-    let dingSound: String
+    let dingSound: String?
     let randomUpperNumberDifficulty: UInt32
     let randomLowerNumberDifficulty: UInt32
 }
