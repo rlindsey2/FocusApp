@@ -109,7 +109,15 @@ class MyAudioPlayer {
             //if new timer equals 0 play as normal. Else it's previously played and has been paused so set new time period to play.
             if newTimerDuration == 0 {
                 backgroundSoundPlayer.play()
-                backgroundSoundPlayer.setVolume(1, fadeDuration: 20)
+                
+                if trainingSession == false {
+                    backgroundSoundPlayer.setVolume(1, fadeDuration: 20)
+                } else {
+                    backgroundSoundPlayer.volume = 1
+                }
+                
+                
+                
                 playingState = true
                 if trainingSession == false {
                 timerStartTime = Date()

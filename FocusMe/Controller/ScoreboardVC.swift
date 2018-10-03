@@ -46,9 +46,7 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     
     
     func informationModalDismissed() {
-        
         fromHomeScreen = true
-        print("called it \(fromHomeScreen)")
     }
     
     
