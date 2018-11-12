@@ -16,10 +16,11 @@
 		9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0328D9206037B3000AE6BB /* SwipingController.swift */; };
 		9D07D47B2113BDA1000B9BFD /* CongratulationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D07D47A2113BDA1000B9BFD /* CongratulationsModel.swift */; };
 		9D1E3E1E2147A4500096D688 /* Kern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1E3E1D2147A4500096D688 /* Kern.swift */; };
-		9D1E3E202148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */; };
-		9D1E3E222148FBF60096D688 /* Underwater_beacon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */; };
+		9D1E3E202148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E1F2148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 */; };
+		9D1E3E222148FBF60096D688 /* Relaxation_beacon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E212148FBF50096D688 /* Relaxation_beacon.wav */; };
 		9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1FAA8220ED79A60032A337 /* CoreData Model.swift */; };
 		9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D2775272152BA6A00BA668F /* Training_session.mp3 */; };
+		9D33E214217085DF006A0EC4 /* ODRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D33E213217085DF006A0EC4 /* ODRManager.swift */; };
 		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
 		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
 		9D4EBD2E20CD4F7700A021D0 /* ListOfLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */; };
@@ -45,6 +46,10 @@
 		9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */; };
 		9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */; };
 		9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */; };
+		9DDB2427218AF4E3004EA65A /* icon_meditation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2423218AF4E2004EA65A /* icon_meditation.gif */; };
+		9DDB2428218AF4E3004EA65A /* icon_head_question.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2424218AF4E2004EA65A /* icon_head_question.gif */; };
+		9DDB2429218AF4E3004EA65A /* icon_headphones.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2425218AF4E2004EA65A /* icon_headphones.gif */; };
+		9DDB242A218AF4E3004EA65A /* icon_shield.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2426218AF4E3004EA65A /* icon_shield.gif */; };
 		9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF37F6205F26590053D0EF /* PageCell.swift */; };
 		9DF98A032107A5B200A0B2DB /* CongratulationsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF98A022107A5B200A0B2DB /* CongratulationsPopupVC.swift */; };
 		D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */; };
@@ -62,10 +67,11 @@
 		9D0328D9206037B3000AE6BB /* SwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingController.swift; sourceTree = "<group>"; };
 		9D07D47A2113BDA1000B9BFD /* CongratulationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsModel.swift; sourceTree = "<group>"; };
 		9D1E3E1D2147A4500096D688 /* Kern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kern.swift; sourceTree = "<group>"; };
-		9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Underwater_main_audio_Big_Blue.mp3; sourceTree = "<group>"; };
-		9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Underwater_beacon.wav; sourceTree = "<group>"; };
+		9D1E3E1F2148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Relaxation_main_audio_Big_Blue.mp3; sourceTree = "<group>"; };
+		9D1E3E212148FBF50096D688 /* Relaxation_beacon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Relaxation_beacon.wav; sourceTree = "<group>"; };
 		9D1FAA8220ED79A60032A337 /* CoreData Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Model.swift"; sourceTree = "<group>"; };
 		9D2775272152BA6A00BA668F /* Training_session.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Training_session.mp3; sourceTree = "<group>"; };
+		9D33E213217085DF006A0EC4 /* ODRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ODRManager.swift; sourceTree = "<group>"; };
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
 		9D4EBD2D20CD4F7700A021D0 /* ListOfLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfLevels.swift; sourceTree = "<group>"; };
@@ -92,6 +98,10 @@
 		9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
 		9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
+		9DDB2423218AF4E2004EA65A /* icon_meditation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_meditation.gif; sourceTree = "<group>"; };
+		9DDB2424218AF4E2004EA65A /* icon_head_question.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_head_question.gif; sourceTree = "<group>"; };
+		9DDB2425218AF4E2004EA65A /* icon_headphones.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_headphones.gif; sourceTree = "<group>"; };
+		9DDB2426218AF4E3004EA65A /* icon_shield.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_shield.gif; sourceTree = "<group>"; };
 		9DEF37F6205F26590053D0EF /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9DF98A022107A5B200A0B2DB /* CongratulationsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsPopupVC.swift; sourceTree = "<group>"; };
 		A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD92CA420A2282200E8CF4B /* HealthKit */,
+				9D33E213217085DF006A0EC4 /* ODRManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -200,6 +211,10 @@
 			isa = PBXGroup;
 			children = (
 				9D008B892024586500165C87 /* Assets.xcassets */,
+				9DDB2424218AF4E2004EA65A /* icon_head_question.gif */,
+				9DDB2425218AF4E2004EA65A /* icon_headphones.gif */,
+				9DDB2423218AF4E2004EA65A /* icon_meditation.gif */,
+				9DDB2426218AF4E3004EA65A /* icon_shield.gif */,
 				9DC2255E202E494400D5D9AA /* Audio files */,
 			);
 			path = Assets;
@@ -220,8 +235,8 @@
 			isa = PBXGroup;
 			children = (
 				9D2775272152BA6A00BA668F /* Training_session.mp3 */,
-				9D1E3E1F2148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 */,
-				9D1E3E212148FBF50096D688 /* Underwater_beacon.wav */,
+				9D1E3E1F2148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 */,
+				9D1E3E212148FBF50096D688 /* Relaxation_beacon.wav */,
 			);
 			path = "Audio files";
 			sourceTree = "<group>";
@@ -299,7 +314,8 @@
 			isa = PBXProject;
 			attributes = {
 				KnownAssetTags = (
-					Test,
+					Relaxation,
+					Training,
 				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
@@ -307,6 +323,7 @@
 				TargetAttributes = {
 					9D008B7B2024586500165C87 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -343,12 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D00ED6E2040B83900DB84C5 /* GoogleService-Info.plist in Resources */,
-				9D1E3E202148FB720096D688 /* Underwater_main_audio_Big_Blue.mp3 in Resources */,
+				9D1E3E202148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 in Resources */,
 				9D008B8D2024586500165C87 /* LaunchScreen.storyboard in Resources */,
+				9DDB2427218AF4E3004EA65A /* icon_meditation.gif in Resources */,
+				9DDB2429218AF4E3004EA65A /* icon_headphones.gif in Resources */,
 				9D008B8A2024586500165C87 /* Assets.xcassets in Resources */,
+				9DDB2428218AF4E3004EA65A /* icon_head_question.gif in Resources */,
 				9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */,
 				9D008B852024586500165C87 /* Main.storyboard in Resources */,
-				9D1E3E222148FBF60096D688 /* Underwater_beacon.wav in Resources */,
+				9D1E3E222148FBF60096D688 /* Relaxation_beacon.wav in Resources */,
+				9DDB242A218AF4E3004EA65A /* icon_shield.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +472,7 @@
 				9D8E99562045E40C00C09A39 /* backgroundImages.swift in Sources */,
 				9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */,
 				9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */,
+				9D33E214217085DF006A0EC4 /* ODRManager.swift in Sources */,
 				9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */,
 				9D0328DA206037B3000AE6BB /* SwipingController.swift in Sources */,
 				9DD6AABF20D0FDE9003B2E98 /* MyAudioPlayer.swift in Sources */,
@@ -606,10 +628,12 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = F829PDC447;
 				INFOPLIST_FILE = FocusMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = Training;
 				PRODUCT_BUNDLE_IDENTIFIER = test.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -623,10 +647,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F829PDC447;
 				INFOPLIST_FILE = FocusMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ON_DEMAND_RESOURCES_PREFETCH_ORDER = Training;
 				PRODUCT_BUNDLE_IDENTIFIER = test.FocusMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

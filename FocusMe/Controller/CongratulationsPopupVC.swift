@@ -43,21 +43,20 @@ class CongratulationsPopupVC: UIViewController, SFSafariViewControllerDelegate {
     private func setupLabels() {
         switch level {
         case 1:
-            iconImage.image = UIImage(named: CongratulationsText.shared.levelHelm.image)
-            headerLabel.text = CongratulationsText.shared.levelHelm.unlockedLevel
-            textLabel.text = CongratulationsText.shared.levelHelm.text
+            iconImage.image = UIImage(named: CongratulationsText.shared.levelStudent.image)
+            headerLabel.text = CongratulationsText.shared.levelStudent.unlockedLevel
+            textLabel.text = CongratulationsText.shared.levelStudent.text
         case 3:
-            iconImage.image = UIImage(named: CongratulationsText.shared.levelSubmarine.image)
-            headerLabel.text = CongratulationsText.shared.levelSubmarine.unlockedLevel
-            textLabel.text = CongratulationsText.shared.levelSubmarine.text
+            iconImage.image = UIImage(named: CongratulationsText.shared.levelMaster.image)
+            headerLabel.text = CongratulationsText.shared.levelMaster.unlockedLevel
+            textLabel.text = CongratulationsText.shared.levelMaster.text
         case 6:
-            iconImage.image = UIImage(named: CongratulationsText.shared.levelUnderwater.image)
-            headerLabel.text = CongratulationsText.shared.levelUnderwater.unlockedLevel
-            textLabel.text = CongratulationsText.shared.levelUnderwater.text
+            iconImage.image = UIImage(named: CongratulationsText.shared.levelGuru.image)
+            headerLabel.text = CongratulationsText.shared.levelGuru.unlockedLevel
+            textLabel.text = CongratulationsText.shared.levelGuru.text
         default:
             print("error with level popup.")
         }
-        
     }
     
     

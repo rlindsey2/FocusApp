@@ -14,7 +14,7 @@ class ReceiveScoreVC: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var guessScore: UILabel!
     
-    lazy var countingNumber = CountingLabel(startValue: 0.0, endValue: Double(bellCountActual!), animationDuration: 2, percentage: false)
+    lazy var countingNumber = CountingLabel(startValue: 0.0, endValue: Double(bellCountActual!), animationDuration: 1, percentage: false)
     
     var level: Int?
     var bellCountGuess: Int?
@@ -34,7 +34,7 @@ class ReceiveScoreVC: UIViewController {
         guessScore.text = "\(unwrappedBellCountGuess) of"
         countingNumber.font = UIFont(name: "Avenir-Heavy", size: 112)
         
-        Timer.scheduledTimer(withTimeInterval: 2.2, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 1.2, repeats: false) { (timer) in
             self.nextButton.isHidden = false
         }
         view.addSubview(countingNumber)
@@ -46,7 +46,7 @@ class ReceiveScoreVC: UIViewController {
     private func setupConstraints() {
         countingNumber.translatesAutoresizingMaskIntoConstraints = false
         self.view.addConstraints([
-            NSLayoutConstraint(item: countingNumber, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0),
+            NSLayoutConstraint(item: countingNumber, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self.view, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1.0, constant: 0),
             NSLayoutConstraint(item: countingNumber, attribute: .top, relatedBy: .equal, toItem: guessScore, attribute: .top, multiplier: 1.0, constant: 30)
             ])
     }

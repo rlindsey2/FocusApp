@@ -30,15 +30,14 @@ class InformationVC: UIViewController, SFSafariViewControllerDelegate {
         setupView()
     }
     
-    
     private func setupView() {
         setCustomLightBackgroundImage()
+        appleHealthOutlet.layer.borderWidth = 1
+        appleHealthOutlet.layer.borderColor = UIColor.white.cgColor
         
         if HKHealthStore.isHealthDataAvailable() {
-            appleHealthOutlet.layer.borderWidth = 1
-            appleHealthOutlet.layer.borderColor = UIColor.white.cgColor
             
-            if healthStore.authorizationStatus(for: HKCategoryType.categoryType(forIdentifier: .mindfulSession)!) == .sharingAuthorized || healthStore.authorizationStatus(for: HKCategoryType.categoryType(forIdentifier: .mindfulSession)!) == .sharingDenied {
+            if healthStore.authorizationStatus(for: HKCategoryType.categoryType(forIdentifier: .mindfulSession)!) == .sharingAuthorized || healthStore.authorizationStatus(for: HKCategoryType.categoryType(forIdentifier: .mindfulSession)!) == .sharingDenied{
                 appleHealthOutlet.isHidden = true
             } else {
                 appleHealthOutlet.isHidden = !HKHealthStore.isHealthDataAvailable()

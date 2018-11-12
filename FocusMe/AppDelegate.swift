@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         Fabric.sharedSDK().debug = true
@@ -44,21 +44,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
-//        
-//        //This is for testing. If we want to test if the correct flow is working we can use this code to test it without deleting the app/resetting code.
-//        let alwaysFirstLaunch = FirstLaunch(getWasLaunchedBefore: { return false }, setWasLaunchedBefore: { _ in })
-//        if alwaysFirstLaunch.isFirstLaunch {
-//            // will always execute
-//
-//            //let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingPager")
-//            let layout = UICollectionViewFlowLayout()
-//            layout.scrollDirection = .horizontal
-//            let swipingController = SwipingController(collectionViewLayout: layout)
-//
-//            self.window?.rootViewController = swipingController
-//            self.window?.makeKeyAndVisible()
-//
-//        }
+        
+        //This is for testing. If we want to test if the correct flow is working we can use this code to test it without deleting the app/resetting code.
+        let alwaysFirstLaunch = FirstLaunch(getWasLaunchedBefore: { return false }, setWasLaunchedBefore: { _ in })
+        if alwaysFirstLaunch.isFirstLaunch {
+            // will always execute
+
+            //let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingPager")
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let swipingController = SwipingController(collectionViewLayout: layout)
+
+            self.window?.rootViewController = swipingController
+            self.window?.makeKeyAndVisible()
+
+        }
         
         return true
     }

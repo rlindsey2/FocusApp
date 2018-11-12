@@ -47,7 +47,7 @@ class MyAudioPlayer {
         let bellSoundURL = Bundle.main.url(forResource: dingResource, withExtension: "wav") ?? nil
         
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.ambient)), mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
             backgroundSoundPlayer = try AVAudioPlayer(contentsOf: backgroundSoundURL)
             
@@ -58,7 +58,7 @@ class MyAudioPlayer {
             }
 
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playback)), mode: .default)
                 try AVAudioSession.sharedInstance().setActive(true)
                 
             } catch {
@@ -166,4 +166,9 @@ class MyAudioPlayer {
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i", minutes, seconds)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

@@ -145,19 +145,13 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
         }
         
         if level >= 2 {
-            levelImage2.image = UIImage(named: "icon_helm")
-            levelLabel2.text = "helm"
+            levelImage2.alpha = 1
+            levelLabel2.alpha = 1
         }
         
         if level >= 4 {
-            levelImage3.image = UIImage(named: "icon_submarine")
-            levelLabel3.text = "submarine"
-        }
-        
-        if level >= 2 && level < 4 {
-            mainLevelImage.image = UIImage(named: "icon_helm")
-        } else if level >= 4 {
-            mainLevelImage.image = UIImage(named: "icon_submarine")
+            levelImage3.alpha = 1
+            levelLabel3.alpha = 1
         }
     }
 

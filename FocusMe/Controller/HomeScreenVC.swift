@@ -74,7 +74,7 @@ class HomeScreenVC: UIViewController {
     
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
-        if gesture.direction == UISwipeGestureRecognizerDirection.up {
+        if gesture.direction == UISwipeGestureRecognizer.Direction.up {
             performSegue(withIdentifier: "swipeUpSegue", sender: self)
         }
     }

@@ -42,7 +42,7 @@ class ProgressView: UIView, CAAnimationDelegate {
         fgProgressLayer.backgroundColor = UIColor.clear.cgColor
         fgProgressLayer.fillColor = nil
         fgProgressLayer.lineWidth = 1.0
-        fgProgressLayer.lineCap = kCALineCapRound
+        fgProgressLayer.lineCap = CAShapeLayerLineCap.round
         fgProgressLayer.strokeColor = UIColor.black.cgColor
         fgProgressLayer.strokeStart = 0.0
         fgProgressLayer.strokeEnd = 0.0
@@ -119,7 +119,7 @@ class ProgressView: UIView, CAAnimationDelegate {
         animation.delegate = self
         animation.isRemovedOnCompletion = false
         animation.isAdditive = true
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         fgProgressLayer.add(animation, forKey: "strokeEnd")
         animationDidStart = true
         

@@ -12,7 +12,7 @@ extension UILabel {
     func addCharacterSpacing(kernValue: Double = 2) {
         if let labelText = text, labelText.count > 0 {
             let attributedString = NSMutableAttributedString(string: labelText)
-            attributedString.addAttribute(NSAttributedStringKey.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
+            attributedString.addAttribute(NSAttributedString.Key.kern, value: kernValue, range: NSRange(location: 0, length: attributedString.length - 1))
             attributedText = attributedString
         }
     }
@@ -29,7 +29,7 @@ extension UILabel {
         set {
             if let labelText = self.text, labelText.count > 0 {
                 let attributedString = NSMutableAttributedString(string: labelText)
-                attributedString.addAttribute(NSAttributedStringKey.kern, value: newValue, range: NSRange(location: 0, length: attributedString.length - 1))
+                attributedString.addAttribute(NSAttributedString.Key.kern, value: newValue, range: NSRange(location: 0, length: attributedString.length - 1))
                 attributedText = attributedString
             }
         }

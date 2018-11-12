@@ -40,13 +40,13 @@ class SessionInProgressVC: UIViewController {
     
     @objc func longPressHappened(_ gesture: UILongPressGestureRecognizer) {
         if gesture.state == .began {
-            let secretAlert = UIAlertController(title: "Secret popup", message: "To test functionality you can skip the session.", preferredStyle: UIAlertControllerStyle.alert)
-            let skipAhead = UIAlertAction(title: "Skip ahead", style: UIAlertActionStyle.default) { (alert) in
+            let secretAlert = UIAlertController(title: "Secret popup", message: "To test functionality you can skip the session.", preferredStyle: UIAlertController.Style.alert)
+            let skipAhead = UIAlertAction(title: "Skip ahead", style: UIAlertAction.Style.default) { (alert) in
                 self.timer.invalidate()
                 self.audio.pause()
                 self.segueNowSessionIsOver()
             }
-            let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default) { (alert) in
+            let cancel = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default) { (alert) in
                 print("Cancel pressed")
             }
             

@@ -15,16 +15,16 @@ struct CongratulationsModel {
 class CongratulationsText {
     static let shared = CongratulationsText()
     
-    let levelHelm = CongratulationsModel(
-        image: "Icon_Green_Helm",
+    let levelStudent = CongratulationsModel(
+        image: "icon_master_green",
         unlockedLevel: "MASTER UNLOCKED",
         text: "Congratulations, you're advancing! Expect each level to get more difficult as you progress, giving you more and more out of each session!")
-    let levelSubmarine = CongratulationsModel(
-        image: "Icon_Green_Sub",
+    let levelMaster = CongratulationsModel(
+        image: "icon_guru_green",
         unlockedLevel: "GURU UNLOCKED",
         text: "Great job! As well as the sessions getting longer, the beacons are also becoming harder to hear.")
-    let levelUnderwater = CongratulationsModel(
-        image: "Icon_Green_Sub",
+    let levelGuru = CongratulationsModel(
+        image: "icon_guru_green",
         unlockedLevel: "APP COMPLETED!",
         text: "Congratulations, you're one of the first people to complete primr! Please give us feedback below about how we can continue to keep improving the app experience.")
 }

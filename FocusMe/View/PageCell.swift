@@ -16,9 +16,9 @@ class PageCell: UICollectionViewCell {
             guard let unwrappedPage = page else { return }
             headerImage.image = UIImage(named: unwrappedPage.imageName)
             
-            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText1, attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir-Light", size: 27) ?? UIFont.boldSystemFont(ofSize: 27), NSAttributedStringKey.foregroundColor: UIColor.white])
+            let attributedText = NSMutableAttributedString(string: unwrappedPage.headerText1, attributes: [NSAttributedString.Key.font: UIFont(name: "Avenir-Light", size: 27) ?? UIFont.boldSystemFont(ofSize: 27), NSAttributedString.Key.foregroundColor: UIColor.white])
             
-            attributedText.append(NSAttributedString(string: unwrappedPage.headerText2, attributes: [NSAttributedStringKey.font: UIFont(name: "Avenir-Heavy", size: 27) ?? UIFont.boldSystemFont(ofSize: 27), NSAttributedStringKey.foregroundColor: UIColor.white]))
+            attributedText.append(NSAttributedString(string: unwrappedPage.headerText2, attributes: [NSAttributedString.Key.font: UIFont(name: "Avenir-Heavy", size: 27) ?? UIFont.boldSystemFont(ofSize: 27), NSAttributedString.Key.foregroundColor: UIColor.white]))
 
             descriptionTextView.attributedText = attributedText
             descriptionTextView.textAlignment = .center
