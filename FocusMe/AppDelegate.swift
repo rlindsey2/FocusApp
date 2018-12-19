@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("first app launch")
             
             let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
+            layout.scrollDirection = .vertical
             let swipingController = SwipingController(collectionViewLayout: layout)
             
             self.window?.rootViewController = swipingController
@@ -46,19 +46,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         //This is for testing. If we want to test if the correct flow is working we can use this code to test it without deleting the app/resetting code.
-        let alwaysFirstLaunch = FirstLaunch(getWasLaunchedBefore: { return false }, setWasLaunchedBefore: { _ in })
-        if alwaysFirstLaunch.isFirstLaunch {
-            // will always execute
-
-            //let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingPager")
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            let swipingController = SwipingController(collectionViewLayout: layout)
-
-            self.window?.rootViewController = swipingController
-            self.window?.makeKeyAndVisible()
-
-        }
+//        let alwaysFirstLaunch = FirstLaunch(getWasLaunchedBefore: { return false }, setWasLaunchedBefore: { _ in })
+//        if alwaysFirstLaunch.isFirstLaunch {
+//            // will always execute
+//
+//            //let initialViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingPager")
+//            let layout = UICollectionViewFlowLayout()
+//            layout.scrollDirection = .vertical
+//            let swipingController = SwipingController(collectionViewLayout: layout)
+//
+//            self.window?.rootViewController = swipingController
+//            self.window?.makeKeyAndVisible()
+//
+//        }
         
         return true
     }

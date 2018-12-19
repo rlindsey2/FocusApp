@@ -16,6 +16,8 @@ class SessionInProgressVC: UIViewController {
     @IBOutlet weak var progressView: ProgressView!
     @IBOutlet weak var durationLeft: UILabel!
     @IBOutlet weak var ctaButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
+    
     
     var level = 0
     var session = ListOfLevels.sharedInstance.allLevels[0]
@@ -59,9 +61,16 @@ class SessionInProgressVC: UIViewController {
     
     private func setupView() {
         setCustomLightBackgroundImage()
+        //long hold to skip session for testing
         let recognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressHappened(_:)))
         recognizer.minimumPressDuration = 4
         view.addGestureRecognizer(recognizer)
+        
+        //show or hide skip button
+        if level != 0 {
+            skipButton.isHidden = true
+        }
+        
         progressView.timerDuration = audio.seconds
         progressView.start()
     }
@@ -144,6 +153,11 @@ class SessionInProgressVC: UIViewController {
         timer.invalidate()
         audio.pause()
     }
+    
+    @IBAction func skipButton(_ sender: UIButton) {
+        segueNowSessionIsOver()
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -210,6 +210,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeZ-68-f37">
+                                <rect key="frame" x="175" y="686" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" title="SKIP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButton:" destination="EjO-Lt-wAa" eventType="touchUpInside" id="8LH-qf-dlA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="nd5-cq-Eci"/>
@@ -218,13 +228,14 @@
                         <outlet property="ctaButton" destination="HJR-vy-Cbg" id="h3d-hV-gVx"/>
                         <outlet property="durationLeft" destination="Z93-7v-h7G" id="s4D-wJ-ZA7"/>
                         <outlet property="progressView" destination="8az-2S-Pi9" id="Xya-Ek-LT4"/>
+                        <outlet property="skipButton" destination="TeZ-68-f37" id="d0r-lu-5fq"/>
                         <segue destination="T4z-I6-mmC" kind="presentation" identifier="sessionToScoreInput" id="vIt-dM-O9j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6F-my-ivQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dFA-Yn-Jgu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3117.5999999999999" y="2586.2068965517242"/>
+            <point key="canvasLocation" x="3117.3913043478265" y="2585.8695652173915"/>
         </scene>
         <!--Input ScoreVC-->
         <scene sceneID="sbs-2L-Vl0">
@@ -502,6 +513,18 @@
                                             <action selector="informationButton:" destination="OT9-po-zGe" eventType="touchUpInside" id="y3x-4B-YBO"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDJ-G4-uQg" userLabel="Right button">
+                                        <rect key="frame" x="15" y="9" width="40" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="btn_x_white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeButton:" destination="OT9-po-zGe" eventType="touchUpInside" id="hYE-RR-a3B"/>
+                                            <action selector="informationButton:" destination="OT9-po-zGe" eventType="touchUpInside" id="bGB-Qn-llO"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -668,7 +691,7 @@
                 <exit id="GmP-UI-cSP" userLabel="Exit" sceneMemberID="exit"/>
                 <swipeGestureRecognizer direction="down" id="0oF-da-Mds">
                     <connections>
-                        <segue destination="GmP-UI-cSP" kind="unwind" unwindAction="unwindToNewMainWithSegue:" id="OlS-rK-5Ua"/>
+                        <segue destination="GmP-UI-cSP" kind="unwind" identifier="unwindToMainFromScoreboard" unwindAction="unwindToNewMainWithSegue:" id="OlS-rK-5Ua"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>

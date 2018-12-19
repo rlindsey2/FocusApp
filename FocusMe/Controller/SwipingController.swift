@@ -8,84 +8,60 @@
 
 import UIKit
 
+protocol CollectionViewCellAnimationDelegate: NSObjectProtocol {
+    func startAnimation()
+}
+
 class SwipingController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    func segue() {
+        print("this works")
+    }
+    
+    weak var delegate: CollectionViewCellAnimationDelegate?
     
     let pages = [
-        OnboardingPage(headerText1: "Prime your mind" , headerText2: "\nConquer the world", imageName: "shield"),
-        OnboardingPage(headerText1: "Dynamic meditations", headerText2: "\nCount the beacons", imageName: "meditate"),
-        OnboardingPage(headerText1: "For best results", headerText2: "\nUse headphones", imageName: "headphones")
+        OnboardingPage(headerText1: "Prime your mind", headerText2: "\nConquer the world", imageName: "icon_shield", optionOne: nil),
+        OnboardingPage(headerText1: "Dynamic meditations", headerText2: "\nCount the beacons", imageName: "icon_meditation", optionOne: nil),
+        OnboardingPage(headerText1: "For best results", headerText2: "\nUse headphones", imageName: "icon_headphones", optionOne: nil),
+        OnboardingPage(headerText1: "How can primr", headerText2: "\nhelp you?", imageName: nil, optionOne: "n")
     ]
-    
-    
-    private let nextButton: RectangleActionButton = {
-        let button = RectangleActionButton(type: .system)
-        button.whiteBorder()
-
-        button.setTitle("Done", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
-        
-        return button
-    }()
-    
-    
-    @objc private func handleNext() {
-        if pageControl.currentPage == (pages.count - 1) {
-            
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreenVC")
-            self.present(nextViewController, animated:true, completion:nil)
-        } else {
-            
-            let nextIndex = min(pageControl.currentPage + 1, pages.count - 1)
-            let indexPath = IndexPath(item: nextIndex, section: 0)
-            pageControl.currentPage = nextIndex
-            collectionView?.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
-    }
     
     
     private lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.currentPage = 0
         pc.numberOfPages = pages.count
-        pc.currentPageIndicatorTintColor = .sunnyGreen
+        pc.currentPageIndicatorTintColor = .green
         pc.pageIndicatorTintColor = .white
         return pc
     }()
     
     
-    fileprivate func setupBottomControls() {
-    
-        view.addSubview(nextButton)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        NSLayoutConstraint(item: nextButton, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.75, constant: 0.0).isActive = true
-
-        view.addSubview(pageControl)
-        pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        pageControl.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        NSLayoutConstraint(item: pageControl, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.45, constant: 0.0).isActive = true
-    }
-    
-    
+    let upArrow = UIImageView()
     override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let x = targetContentOffset.pointee.x
-        pageControl.currentPage = Int(x / view.frame.width)
+        let x = targetContentOffset.pointee.y
+        pageControl.currentPage = Int(x / view.frame.height)
+        if pageControl.currentPage == (pages.count - 1) {
+            upArrow.isHidden = true
+        } else {
+            upArrow.isHidden = false
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupBottomControls()
-        
         let bgImage = UIImageView()
         bgImage.image = UIImage(named: "background_gradient_light")
         bgImage.contentMode = .scaleToFill
         collectionView?.backgroundView = bgImage
+        
+        upArrow.image = UIImage(named: "icon_arrows_up")
+        upArrow.contentMode = .scaleAspectFit
+        view.addSubview(upArrow)
+        upArrow.translatesAutoresizingMaskIntoConstraints = false
+        upArrow.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        NSLayoutConstraint(item: upArrow, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1.9, constant: 0.0).isActive = true
         
         collectionView?.register(PageCell.self, forCellWithReuseIdentifier: "cellID")
         collectionView?.isPagingEnabled = true
@@ -101,17 +77,36 @@ class SwipingController: UICollectionViewController, UICollectionViewDelegateFlo
         return pages.count
     }
     
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath == [0,(pages.count-1)] {
+            cell.alpha = 0
+            cell.layer.transform = CATransform3DMakeScale(0.5, 0.5, 0.5)
+            UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                cell.alpha = 1
+                cell.layer.transform = CATransform3DScale(CATransform3DIdentity, 1, 1, 1)
+            })
+        }
+    }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath) as! PageCell
         let page = pages[indexPath.item]
         cell.page = page
-        
+        cell.delegate = self
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
+    }
+}
+
+extension SwipingController: CollectionViewCellDelegate {
+    func collectionViewCell(_ cell: UICollectionViewCell) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreenVC")
+        self.present(nextViewController, animated:true, completion:nil)
     }
 }

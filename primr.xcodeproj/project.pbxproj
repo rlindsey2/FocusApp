@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95117F4D697D962B0B5270DC /* Pods_primr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57C65B6953092E224D15485 /* Pods_primr.framework */; };
 		9D008B802024586500165C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B7F2024586500165C87 /* AppDelegate.swift */; };
 		9D008B852024586500165C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D008B832024586500165C87 /* Main.storyboard */; };
 		9D008B882024586500165C87 /* FocusMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D008B862024586500165C87 /* FocusMe.xcdatamodeld */; };
@@ -20,6 +21,10 @@
 		9D1E3E222148FBF60096D688 /* Relaxation_beacon.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9D1E3E212148FBF50096D688 /* Relaxation_beacon.wav */; };
 		9D1FAA8320ED79A60032A337 /* CoreData Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1FAA8220ED79A60032A337 /* CoreData Model.swift */; };
 		9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D2775272152BA6A00BA668F /* Training_session.mp3 */; };
+		9D2C4D8C219A3976003FA90B /* icon_meditation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C4D88219A3976003FA90B /* icon_meditation.gif */; };
+		9D2C4D8D219A3976003FA90B /* icon_head_question.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C4D89219A3976003FA90B /* icon_head_question.gif */; };
+		9D2C4D8E219A3976003FA90B /* icon_shield.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C4D8A219A3976003FA90B /* icon_shield.gif */; };
+		9D2C4D8F219A3976003FA90B /* icon_headphones.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9D2C4D8B219A3976003FA90B /* icon_headphones.gif */; };
 		9D33E214217085DF006A0EC4 /* ODRManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D33E213217085DF006A0EC4 /* ODRManager.swift */; };
 		9D36FCA42061018200554D03 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D36FCA32061018200554D03 /* OnboardingPage.swift */; };
 		9D4B25F320646A3B008C9FA9 /* colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B25F220646A3B008C9FA9 /* colours.swift */; };
@@ -46,16 +51,13 @@
 		9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */; };
 		9DD92CA120A1885600E8CF4B /* HealthKitSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */; };
 		9DD92CA320A2228100E8CF4B /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */; };
-		9DDB2427218AF4E3004EA65A /* icon_meditation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2423218AF4E2004EA65A /* icon_meditation.gif */; };
-		9DDB2428218AF4E3004EA65A /* icon_head_question.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2424218AF4E2004EA65A /* icon_head_question.gif */; };
-		9DDB2429218AF4E3004EA65A /* icon_headphones.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2425218AF4E2004EA65A /* icon_headphones.gif */; };
-		9DDB242A218AF4E3004EA65A /* icon_shield.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9DDB2426218AF4E3004EA65A /* icon_shield.gif */; };
 		9DEF37F7205F26590053D0EF /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEF37F6205F26590053D0EF /* PageCell.swift */; };
 		9DF98A032107A5B200A0B2DB /* CongratulationsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF98A022107A5B200A0B2DB /* CongratulationsPopupVC.swift */; };
-		D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D60C380C0BC1E64845C0F3F /* Pods-primr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-primr/Pods-primr.debug.xcconfig"; sourceTree = "<group>"; };
+		3F34D2AA028AC099A1F0B227 /* Pods-primr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-primr.release.xcconfig"; path = "Pods/Target Support Files/Pods-primr/Pods-primr.release.xcconfig"; sourceTree = "<group>"; };
 		9D008B7C2024586500165C87 /* primr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = primr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D008B7F2024586500165C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D008B842024586500165C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,10 @@
 		9D1E3E212148FBF50096D688 /* Relaxation_beacon.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Relaxation_beacon.wav; sourceTree = "<group>"; };
 		9D1FAA8220ED79A60032A337 /* CoreData Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreData Model.swift"; sourceTree = "<group>"; };
 		9D2775272152BA6A00BA668F /* Training_session.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Training_session.mp3; sourceTree = "<group>"; };
+		9D2C4D88219A3976003FA90B /* icon_meditation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_meditation.gif; sourceTree = "<group>"; };
+		9D2C4D89219A3976003FA90B /* icon_head_question.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_head_question.gif; sourceTree = "<group>"; };
+		9D2C4D8A219A3976003FA90B /* icon_shield.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_shield.gif; sourceTree = "<group>"; };
+		9D2C4D8B219A3976003FA90B /* icon_headphones.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_headphones.gif; sourceTree = "<group>"; };
 		9D33E213217085DF006A0EC4 /* ODRManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ODRManager.swift; sourceTree = "<group>"; };
 		9D36FCA32061018200554D03 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingPage.swift; path = FocusMe/Model/OnboardingPage.swift; sourceTree = SOURCE_ROOT; };
 		9D4B25F220646A3B008C9FA9 /* colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colours.swift; sourceTree = "<group>"; };
@@ -98,15 +104,10 @@
 		9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		9DD92CA020A1885600E8CF4B /* HealthKitSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitSetup.swift; sourceTree = "<group>"; };
 		9DD92CA220A2228100E8CF4B /* ProfileDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
-		9DDB2423218AF4E2004EA65A /* icon_meditation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_meditation.gif; sourceTree = "<group>"; };
-		9DDB2424218AF4E2004EA65A /* icon_head_question.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_head_question.gif; sourceTree = "<group>"; };
-		9DDB2425218AF4E2004EA65A /* icon_headphones.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_headphones.gif; sourceTree = "<group>"; };
-		9DDB2426218AF4E3004EA65A /* icon_shield.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_shield.gif; sourceTree = "<group>"; };
 		9DEF37F6205F26590053D0EF /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		9DF98A022107A5B200A0B2DB /* CongratulationsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsPopupVC.swift; sourceTree = "<group>"; };
 		A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FocusMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.release.xcconfig"; sourceTree = "<group>"; };
-		E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FocusMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe.debug.xcconfig"; sourceTree = "<group>"; };
+		D57C65B6953092E224D15485 /* Pods_primr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_primr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FEA36B4BA16DC2B79EC23F /* Pods_FocusMe.framework in Frameworks */,
 				9DD92C9F20A1869F00E8CF4B /* HealthKit.framework in Frameworks */,
+				95117F4D697D962B0B5270DC /* Pods_primr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +128,7 @@
 			children = (
 				9DD92C9E20A1869F00E8CF4B /* HealthKit.framework */,
 				A979BF4703297E1AB18D2D38 /* Pods_FocusMe.framework */,
+				D57C65B6953092E224D15485 /* Pods_primr.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,11 +212,11 @@
 		9D57BF132030322B0015032B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				9D2C4D89219A3976003FA90B /* icon_head_question.gif */,
+				9D2C4D8B219A3976003FA90B /* icon_headphones.gif */,
+				9D2C4D88219A3976003FA90B /* icon_meditation.gif */,
+				9D2C4D8A219A3976003FA90B /* icon_shield.gif */,
 				9D008B892024586500165C87 /* Assets.xcassets */,
-				9DDB2424218AF4E2004EA65A /* icon_head_question.gif */,
-				9DDB2425218AF4E2004EA65A /* icon_headphones.gif */,
-				9DDB2423218AF4E2004EA65A /* icon_meditation.gif */,
-				9DDB2426218AF4E3004EA65A /* icon_shield.gif */,
 				9DC2255E202E494400D5D9AA /* Audio files */,
 			);
 			path = Assets;
@@ -277,8 +279,8 @@
 		ECF245344995D1FDF86C6A72 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */,
-				D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */,
+				1D60C380C0BC1E64845C0F3F /* Pods-primr.debug.xcconfig */,
+				3F34D2AA028AC099A1F0B227 /* Pods-primr.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -295,7 +297,6 @@
 				9D008B792024586500165C87 /* Frameworks */,
 				9D008B7A2024586500165C87 /* Resources */,
 				180757F76311B57E61CBD3B1 /* [CP] Embed Pods Frameworks */,
-				1551A4C0331353ED5D948310 /* [CP] Copy Pods Resources */,
 				9D00ED6F2040DD3B00DB84C5 /* ShellScript */,
 			);
 			buildRules = (
@@ -362,53 +363,40 @@
 				9D00ED6E2040B83900DB84C5 /* GoogleService-Info.plist in Resources */,
 				9D1E3E202148FB720096D688 /* Relaxation_main_audio_Big_Blue.mp3 in Resources */,
 				9D008B8D2024586500165C87 /* LaunchScreen.storyboard in Resources */,
-				9DDB2427218AF4E3004EA65A /* icon_meditation.gif in Resources */,
-				9DDB2429218AF4E3004EA65A /* icon_headphones.gif in Resources */,
 				9D008B8A2024586500165C87 /* Assets.xcassets in Resources */,
-				9DDB2428218AF4E3004EA65A /* icon_head_question.gif in Resources */,
+				9D2C4D8C219A3976003FA90B /* icon_meditation.gif in Resources */,
 				9D2775282152BA6A00BA668F /* Training_session.mp3 in Resources */,
 				9D008B852024586500165C87 /* Main.storyboard in Resources */,
+				9D2C4D8E219A3976003FA90B /* icon_shield.gif in Resources */,
 				9D1E3E222148FBF60096D688 /* Relaxation_beacon.wav in Resources */,
-				9DDB242A218AF4E3004EA65A /* icon_shield.gif in Resources */,
+				9D2C4D8D219A3976003FA90B /* icon_head_question.gif in Resources */,
+				9D2C4D8F219A3976003FA90B /* icon_headphones.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1551A4C0331353ED5D948310 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		180757F76311B57E61CBD3B1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-primr/Pods-primr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gifu/Gifu.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gifu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FocusMe/Pods-FocusMe-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-primr/Pods-primr-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D00ED6F2040DD3B00DB84C5 /* ShellScript */ = {
@@ -422,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		F55835CF10ADEC2F9C3251B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -435,7 +423,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FocusMe-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-primr-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -620,7 +608,7 @@
 		};
 		9D008B922024586500165C87 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E62138502EF0F3D145D11EF9 /* Pods-FocusMe.debug.xcconfig */;
+			baseConfigurationReference = 1D60C380C0BC1E64845C0F3F /* Pods-primr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FocusMe/FocusMe.entitlements;
@@ -640,7 +628,7 @@
 		};
 		9D008B932024586500165C87 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E9B77840C377CB98A7196E /* Pods-FocusMe.release.xcconfig */;
+			baseConfigurationReference = 3F34D2AA028AC099A1F0B227 /* Pods-primr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FocusMe/FocusMe.entitlements;

@@ -8,14 +8,15 @@ PODS:
   - FirebaseAnalytics (4.0.5):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
     - nanopb (~> 0.3)
   - FirebaseCore (4.0.13):
-    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
   - FirebaseInstanceID (2.0.8):
     - FirebaseCore (~> 4.0)
+  - Gifu (3.2.0)
   - GoogleToolboxForMac/Defines (2.1.3)
-  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+  - "GoogleToolboxForMac/NSData+zlib (2.1.3)":
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
@@ -27,6 +28,19 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - Firebase/Core
+  - Gifu
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - Gifu
+    - GoogleToolboxForMac
+    - nanopb
 
 SPEC CHECKSUMS:
   Crashlytics: dbb07d01876c171c5ccbdf7826410380189e452c
@@ -35,9 +49,10 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseCore: 3c02ec652db3d03fdc8bc6d9154af3e20d64b6f5
   FirebaseInstanceID: 81df5805a08001e69138664bdd02c6719a9ac80f
+  Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: f515b9dbe5d299e9aa269f40b927c3f1264378ed
+PODFILE CHECKSUM: 742421b1cfb4b7f31321b6b1df26201b0c5650d4
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

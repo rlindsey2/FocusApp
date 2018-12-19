@@ -73,7 +73,6 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     
     
     override func viewDidAppear(_ animated: Bool) {
-        print("home screen variable is \(fromHomeScreen)")
         progressBarAnimation()
 //        levelImage2.animation(height: 200)
     }
@@ -159,6 +158,11 @@ class ScoreboardVC: UIViewController, CongratulationsDelegate, InformationVCDele
     @IBAction func informationButton(_ sender: UIButton) {
         performSegue(withIdentifier: "scoreboardToInformation", sender: nil)
     }
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "unwindToMainFromScoreboard", sender: nil)
+    }
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
